@@ -1,0 +1,52 @@
+
+@import url("https://fonts.googleapis.com/css?family=Inter");
+
+/*Common to all*/
+
+
+body{
+    background-color:#b9a684 ;
+}
+
+.top-marquee{
+    background-color: #1c4b4b;
+    color: aliceblue;
+    font-family: 'Inter', sans-serif;
+  
+}
+.nav-link {
+    color: #1d7c7c !important;
+    font-family:'Inter', sans-serif;';
+    
+    font-size: 12px;
+    font-weight: 900;
+    padding: 0 10px;
+    text-transform: uppercase;
+    transition: all 0.3s ease 0s;
+}
+
+.changecolour{
+    background-color: #343434;
+}
+
+
+/*Exhibitions*/
+
+
+/*Top Artists*/
+
+
+/*Gallery Map*/
+
+
+/*History of Art*/
+
+
+/*Art Display Gallery*/
+
+
+/*About*/
+
+
+
+
