@@ -30,6 +30,23 @@ body{
 }
 
 
+.inter{
+    font-family: 'Inter', sans-serif;
+}
+
+.centertopcardtext{
+    position:absolute;
+    top:50%;
+    transform: translate(0,-50%);
+}
+
+.centertopcardsubtext{
+    position:absolute;
+    top: 60%;
+    transform: translate(0,0%);
+}
+
+
 /*Exhibitions*/
 
 
