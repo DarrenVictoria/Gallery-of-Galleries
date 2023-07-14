@@ -1,10 +1,14 @@
 
 @import url("https://fonts.googleapis.com/css?family=Inter");
+@import url('https://fonts.cdnfonts.com/css/bebas-neue');
 
 /*Common to all*/
 
-
 body{
+    background-color:#b9a684 ;
+}
+
+.bodybgcolor{
     background-color:#b9a684 ;
 }
 
@@ -16,7 +20,7 @@ body{
 }
 .nav-link {
     color: #1d7c7c !important;
-    font-family:'Inter', sans-serif;';
+    font-family:'Inter', sans-serif;
     
     font-size: 12px;
     font-weight: 900;
@@ -28,41 +32,42 @@ body{
 .changecolour{
     background-color: #343434;
 }
-
-
 .inter{
     font-family: 'Inter', sans-serif;
+    color: aliceblue;
+}
+.bebas-neue{
+    font-family: 'Bebas Neue', cursive;
+    font-size: 100px;
+    font-weight: 1000;
+    font-style: bold;
 }
 
+.bebas-neue-sub{
+    font-family: 'Bebas Neue', cursive;
+    font-size: 30px;
+    font-weight: 1000;
+    font-style: bold;
+}
+
+/* Home Page */
+
+
+
 .centertopcardtext{
-    position:absolute;
+    position:relative;
     top:50%;
     transform: translate(0,-50%);
 }
 
 .centertopcardsubtext{
     position:absolute;
-    top: 60%;
+    top: 70%;
     transform: translate(0,0%);
 }
 
 
-/*Exhibitions*/
 
-
-/*Top Artists*/
-
-
-/*Gallery Map*/
-
-
-/*History of Art*/
-
-
-/*Art Display Gallery*/
-
-
-/*About*/
 
 
 
