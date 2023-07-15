@@ -59,8 +59,14 @@ body{
 }
 
 /* Home Page */
+.card{
+    border-radius: 25px;
+    
+}
 
-
+.card .row{
+    align-items: center;
+}
 
 .centertopcardtext{
     position:relative;
