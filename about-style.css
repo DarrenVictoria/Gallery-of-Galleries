@@ -1,0 +1,306 @@
+@import url("https://fonts.googleapis.com/css?family=Inter");
+
+@import url(//fonts.googleapis.com/css?family=Montserrat:300,500);
+
+body {
+    background-color: #ebebe3;
+}
+
+.bodybgcolor {
+    background-color: #ebebe3;
+}
+
+.top-marquee {
+    background-color: #5e3323;
+    color: aliceblue;
+    font-family: 'Inter', sans-serif;
+
+}
+
+/*bla bla*/
+
+.nav-bar-color {
+    background-color: #8e6f5b;
+}
+
+.nav-logo {
+    color: f6fafb;
+    font-family: 'Inter', cursive;
+
+}
+
+.nav-link {
+    color: #f6fafb !important;
+    font-family: 'Inter', sans-serif;
+    font-size: 12px;
+    font-weight: 900;
+    padding: 0 10px;
+    text-transform: uppercase;
+    transition: all 0.3s ease 0s;
+}
+
+.changecolour {
+    background-color: #343434;
+}
+
+.inter {
+    font-family: 'Inter', sans-serif;
+    color: aliceblue;
+}
+
+.bebas-neue {
+    font-family: 'Bebas Neue', cursive;
+    font-size: 100px;
+    font-weight: 1000;
+    font-style: bold;
+}
+
+.bebas-neue-sub {
+    font-family: 'Bebas Neue', cursive;
+    font-size: 30px;
+    font-weight: 1000;
+    font-style: bold;
+}
+
+/* Home Page */
+.card-mid {
+    border-radius: 25px;
+
+}
+
+.card-mid .row {
+    align-items: center;
+}
+
+.centertopcardtext {
+    position: relative;
+    top: 50%;
+    transform: translate(0, -50%);
+}
+
+.centertopcardsubtext {
+    position: absolute;
+    top: 70%;
+    transform: translate(0, 0%);
+}
+.card-wrapper
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    flex-wrap: wrap;
+}
+.card {
+    min-width: 370px;
+    height: 420px;
+    position: relative;
+    background: #232323;
+    border-radius: 16.04px;
+    overflow: hidden;
+    border: 0.50px #4F4F4F solid;
+    transition: all 0.5s;
+    margin: 0;
+}
+
+.card:hover{
+    transform: scale(105%);
+}
+.frame-1 {
+    height: 130px;
+    padding-left: 20px;
+    padding-top: 30px;
+    position: absolute;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 20px;
+    display: inline-flex;
+}
+
+.skill {
+    align-self: stretch;
+    color: #4DE3ED;
+    font-size: 18px;
+    font-family: Inter;
+    font-weight: 600;
+    word-wrap: break-word;
+}
+
+.name {
+    align-self: stretch;
+    color: white;
+    font-size: 40px;
+    font-family: inter;
+    font-weight: 600;
+    line-height: 40px;
+    word-wrap: break-word;
+}
+
+.frame-2 {
+    padding-left: 20px;
+    top: 200px;
+    position: absolute;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 10px;
+    display: inline-flex;
+}
+
+.socials {
+    color: white;
+    margin-left: 1.6px;
+    font-size: 18px;
+    font-family: inter;
+    font-weight: 600;
+    word-wrap: break-word;
+}
+
+.socials-icons {
+    width: 6%;
+    margin-right: 8px;
+    filter: grayscale(100%);
+    transition: all 0.60s;
+}
+
+.socials-icons:hover {
+    filter: grayscale(0%);
+    transform: scale(100%);
+}
+
+.image-frame {
+    left: 160px;
+    top: 200px;
+    position: relative;
+}
+
+.jesus-glow {
+    width: 200px;
+    height: 190px;
+    left: 16px;
+    top: -45px;
+    position: absolute;
+    background: #7a7a7a;
+    box-shadow: 150px 150px 150px;
+    border-radius: 1000px;
+    filter: blur(20px);
+    transition: all 0.5s;
+}
+
+.card:hover .jesus-glow {
+    transform: scaleX(100%);
+    background-color: #C38154;
+}
+
+.jesus-glow-2 {
+    width: 200px;
+    height: 190px;
+    left: 16px;
+    top: -45px;
+    position: absolute;
+    background: #7a7a7a;
+    box-shadow: 150px 150px 150px;
+    border-radius: 1000px;
+    filter: blur(20px);
+    transition: all 0.5s;
+}
+
+.card:hover .jesus-glow-2 {
+    transform: scaleX(100%);
+    background-color: #C8B6A6;
+}
+
+.jesus-glow-3 {
+    width: 200px;
+    height: 190px;
+    left: 16px;
+    top: -45px;
+    position: absolute;
+    background: #7a7a7a;
+    box-shadow: 150px 150px 150px;
+    border-radius: 1000px;
+    filter: blur(20px);
+    transition: all 0.5s;
+}
+
+.card:hover .jesus-glow-3 {
+    transform: scaleX(100%);
+    background-color: #CA955C;
+}
+.profile-pic {
+    width: 220px;
+    height: 260px;
+    left: -18px;
+    top: -30px;
+    position: relative;
+}
+
+.box{
+    margin: 30px 30px 30px 30px;
+    padding: 30px 30px 30px 30px;
+    background-color: #ffffff;
+    border-radius: 12px;
+}
+.heading{
+    font-size: 30px;
+    font-family: inter;
+    font-weight: 1000;
+    font-style: bold;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.nsbm-image
+{
+    width: 40%;
+    height: auto;
+    border-radius: 10px 10px 10px 10px;
+    float: right;
+    margin: 8px 0px 8px 8px;
+}
+
+.nsbm-image-top
+{
+    width: 100%;
+    height: auto;
+    border-radius: 10px 10px 10px 10px;
+    margin-bottom: 1.5rem;
+    display: none;
+}
+.text{
+    font-size: 16px;
+    text-align: justify;
+    font-family: inter; 
+}
+
+.button{
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    font-size: 14px;
+    padding: 8px;
+    font-family: inter;
+    border-radius: 10px;
+    background-color: #8e6f5b;
+    transition: all 0.5s;
+}
+
+.button:hover{
+    text-decoration-line: none;
+    background-color: #5e3323;
+    color: white;
+    transition: 0.5s;
+}
+
+@media screen and (max-width: 680px){
+    .nsbm-image
+    {
+        display: none;
+    }
+    .nsbm-image-top
+    {
+        display: block;
+    }
+}
