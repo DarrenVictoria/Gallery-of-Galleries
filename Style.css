@@ -4,11 +4,15 @@
 
 /*Common to all*/
 
-img{
+img {
     filter: sepia(100%);
-}
+    transition: all 3s;
+  }
 
-
+img:hover {
+    filter: sepia(0%);
+    
+  }
 
 body{
     background-color:#ebebe3 ;
@@ -24,6 +28,8 @@ body{
     font-family: 'Inter', sans-serif;
   
 }
+
+/*bla bla*/
 
 .nav-bar-color{
     background-color: #8e6f5b ;
@@ -65,8 +71,14 @@ body{
 }
 
 /* Home Page */
+.card-mid{
+    border-radius: 25px;
+    
+}
 
-
+.card-mid .row{
+    align-items: center;
+}
 
 .centertopcardtext{
     position:relative;
