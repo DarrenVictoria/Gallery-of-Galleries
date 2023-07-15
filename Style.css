@@ -4,6 +4,12 @@
 
 /*Common to all*/
 
+img{
+    filter: sepia(100%);
+}
+
+
+
 body{
     background-color:#ebebe3 ;
 }
@@ -18,8 +24,6 @@ body{
     font-family: 'Inter', sans-serif;
   
 }
-
-/*bla bla*/
 
 .nav-bar-color{
     background-color: #8e6f5b ;
@@ -61,14 +65,8 @@ body{
 }
 
 /* Home Page */
-.card{
-    border-radius: 25px;
-    
-}
 
-.card .row{
-    align-items: center;
-}
+
 
 .centertopcardtext{
     position:relative;
