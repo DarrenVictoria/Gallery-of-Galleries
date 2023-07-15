@@ -5,23 +5,31 @@
 /*Common to all*/
 
 body{
-    background-color:#b9a684 ;
+    background-color:#ebebe3 ;
 }
 
 .bodybgcolor{
-    background-color:#b9a684 ;
+    background-color:#ebebe3  ;
 }
 
 .top-marquee{
-    background-color: #1c4b4b;
+    background-color: #5e3323;
     color: aliceblue;
     font-family: 'Inter', sans-serif;
   
 }
+
+.nav-bar-color{
+    background-color: #8e6f5b ;
+}
+.nav-logo{
+    color: f6fafb;
+    font-family: 'Inter', cursive;
+
+}
 .nav-link {
-    color: #1d7c7c !important;
+    color: #f6fafb   !important;
     font-family:'Inter', sans-serif;
-    
     font-size: 12px;
     font-weight: 900;
     padding: 0 10px;
