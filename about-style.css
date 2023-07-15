@@ -17,8 +17,6 @@ body {
 
 }
 
-/*bla bla*/
-
 .nav-bar-color {
     background-color: #8e6f5b;
 }
@@ -82,6 +80,16 @@ body {
     position: absolute;
     top: 70%;
     transform: translate(0, 0%);
+}
+
+h1{
+    font-size: 50px;
+    color: #8e6f5b;
+    font-family: inter;
+    font-weight: 1000;
+    font-style: bold;
+    margin: 24px;
+    margin-bottom: 50px;
 }
 .card-wrapper
 {
@@ -238,7 +246,7 @@ body {
 }
 
 .box{
-    margin: 30px 30px 30px 30px;
+    margin: 24px 24px 24px 24px;
     padding: 30px 30px 30px 30px;
     background-color: #ffffff;
     border-radius: 12px;
@@ -248,8 +256,6 @@ body {
     font-family: inter;
     font-weight: 1000;
     font-style: bold;
-    margin-bottom: 20px;
-    margin-top: 20px;
 }
 
 .nsbm-image
