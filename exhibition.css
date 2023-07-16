@@ -1,0 +1,124 @@
+@import url("https://fonts.googleapis.com/css?family=Inter");
+@import url('https://fonts.cdnfonts.com/css/bebas-neue');
+.flexbox-container{
+    display: flex;
+    flex-direction: column;
+    flex-wrap:wrap;
+    justify-content:stretch;
+    align-content:center;
+    background-color: #ebebe3;
+    width: auto;
+    height: auto;
+    padding-top: 30px;
+
+    
+}
+
+.flexbox-item{
+    display: flex;
+    width: auto;
+    height: auto;
+    max-width: 1300px;
+    margin: 10px;
+    border: 1px solid #333;
+    border-radius: 20px;
+    background-color:#343434;
+    cursor: pointer;
+    will-change: transform;
+    transition: transform .2s;
+
+    
+}
+.button1{
+  position: absolute;
+  bottom: 10px;
+  right: 15px;
+  border-radius: 10px;
+  background-color: #343434; 
+  color: white; 
+  border: 2px solid white;
+  transition-duration: 0.5s;
+  cursor: pointer;
+  font-size: 16px;
+  margin: 4px 2px;
+  padding: 16px 32px;
+  
+}
+.button1:hover {
+    background-color: white;
+    color: #343434;
+
+}
+.button1:active{
+    .content{display: block;}
+}
+
+.text{
+    margin: 5%;
+    font-size: 20px;
+    border-radius: 20px;
+    background-color:#343434;
+    color: #f6fafb;
+    font-family: monospace;
+}
+
+
+.flexbox-item:hover{
+    -ms-transform: scale(1.01);
+    -webkit-transform: scale(1.01); 
+    transform: scale(1.01);
+}
+
+.img-fluid{
+    height: 100%;
+    max-height: 400px;
+    width: 100% fixed;
+    max-width: 300px;
+    border-radius: 20px; 
+    border-bottom-right-radius: 0%;  
+    border-top-right-radius: 0%;
+    
+}
+h1{
+    padding: 40px;
+
+}
+.p1{
+    font-family:sans-serif ;
+    font-size: 30px;
+}
+.content{
+    display: none;
+}
+.nav-bar-color{
+    background-color: #8e6f5b ;
+}
+.nav-logo{
+    color: f6fafb;
+    font-family: 'Inter', cursive;
+
+}
+.nav-link {
+    color: #f6fafb   !important;
+    font-family:'Inter', sans-serif;
+    font-size: 17px;
+    font-weight: 900;
+    padding: 0 10px;
+    text-transform: uppercase;
+    transition: all 0.3s ease 0s;
+}
+.top-marquee{
+    background-color: #5e3323;
+    color: aliceblue;
+    font-family: 'Inter', sans-serif;
+  
+}
+.category{
+    font-family: 'Bebas Neue', cursive;
+    font-size: 100px;
+    font-weight: 1000;
+    font-style: bold;
+    color: #343434;
+}
+
+
