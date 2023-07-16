@@ -4,9 +4,20 @@
 
 /*Common to all*/
 
+.logo-main{
+    filter:none;
+
+    
+}
+.logo-main:hover{
+    filter: drop-shadow(3px 3px 3px #5e3323);
+    transition: all 1s;
+
+}
+
 img {
-    filter: sepia(100%);
-    transition: all 2s;
+    filter: sepia(80%);
+    transition: all 1s;
   }
 
 img:hover {
@@ -42,7 +53,7 @@ body{
 .nav-link {
     color: #f6fafb   !important;
     font-family:'Inter', sans-serif;
-    font-size: 12px;
+    font-size: 17px;
     font-weight: 900;
     padding: 0 10px;
     text-transform: uppercase;
@@ -71,6 +82,8 @@ body{
 }
 
 /* Home Page */
+
+
 .card-mid{
     border-radius: 25px;
     
