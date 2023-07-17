@@ -1,0 +1,275 @@
+
+@import url("https://fonts.googleapis.com/css?family=Inter");
+@import url('https://fonts.cdnfonts.com/css/bebas-neue');
+
+/*Common to all*/
+
+.logo-main{
+    filter:none;
+
+    
+}
+.logo-main:hover{
+    filter: drop-shadow(3px 3px 3px #5e3323);
+    transition: all 1s;
+
+}
+
+img {
+    filter: sepia(80%);
+    transition: all 1s;
+  }
+
+img:hover {
+    filter: sepia(0%);
+    
+  }
+
+body{
+    background-color:#ebebe3 ;
+}
+
+.bodybgcolor{
+    background-color:#ebebe3  ;
+}
+
+.top-marquee{
+    background-color: #5e3323;
+    color: aliceblue;
+    font-family: 'Inter', sans-serif;
+  
+}
+
+/*bla bla*/
+
+.nav-bar-color{
+    background-color: #8e6f5b ;
+}
+.nav-logo{
+    color: f6fafb;
+    font-family: 'Inter', cursive;
+
+}
+.nav-link {
+    color: #f6fafb   !important;
+    font-family:'Inter', sans-serif;
+    font-size: 17px;
+    font-weight: 900;
+    padding: 0 10px;
+    text-transform: uppercase;
+    transition: all 0.3s ease 0s;
+}
+
+.changecolour{
+    background-color: #343434;
+}
+.inter{
+    font-family: 'Inter', sans-serif;
+    color: aliceblue;
+}
+.bebas-neue{
+    font-family: 'Bebas Neue', cursive;
+    font-size: 100px;
+    font-weight: 1000;
+    font-style: bold;
+}
+
+.bebas-neue-sub{
+    font-family: 'Bebas Neue', cursive;
+    font-size: 30px;
+    font-weight: 1000;
+    font-style: bold;
+}
+
+/* Home Page */
+
+
+
+.card-mid{
+    border-radius: 25px;
+    
+}
+
+.card-mid .row{
+    align-items: center;
+}
+
+.centertopcardtext{
+    position:relative;
+    top:50%;
+    transform: translate(0,-50%);
+}
+
+.centertopcardsubtext{
+    position:absolute;
+    top: 70%;
+    transform: translate(0,0%);
+}
+
+/*My code (yvan) */
+
+.card-mid{
+    border-radius: 25px;
+    
+}
+
+.card-mid .row{
+    align-items: center;
+}
+
+.centertopcardtext{
+    position:relative;
+    top:50%;
+    transform: translate(0,-50%);
+}
+
+.centertopcardsubtext{
+    position:absolute;
+    top: 70%;
+    transform: translate(0,0%);
+}
+
+.header{
+
+	border: 5px solid #343434;
+	background-color: #343434;
+	border-radius: 20px;
+	padding: 30px;
+	width: 1300px;
+	margin: 5em;
+	padding: 5em;
+	margin: 0 auto;
+	text-align: justify;
+}
+img{
+	
+	
+	border-radius: 10px;
+	width: 380px;
+	height: 230px;
+	margin-top: 0.5em;
+	margin-bottom: 1em;
+	
+}
+h1{
+	color: #ffffff;
+	padding-bottom: em;
+	font-size: 5em;
+	padding-bottom: 10px;
+	text-align: center;
+}
+
+.intro{
+	font-size: 1.5em;
+	padding-top: 1em;
+	color: #ffffff;
+}
+*{
+	margin:0;
+	padding:0;
+	box-sizing: border-box;
+}
+body{
+	font-family: 'Inter', sans-serif;
+}
+.timeline-section{
+	background-color: #b9a684;
+	min-height: 100vh;
+	padding: 100px 15px;
+}
+.timeline-items{
+	max-width: 1000px;
+	margin:auto;
+	display: flex;
+	flex-wrap: wrap;
+	position: relative;
+}
+.timeline-items::before{
+	content: '';
+	position: absolute;
+	width: 3px;
+	height: 100%;
+	background-color: #343434;
+	left: calc(50% - 1px);
+}
+.timeline-item{
+	margin-bottom: 40px;
+	width: 100%;
+	position: relative;
+}
+.timeline-item:last-child{
+	margin-bottom: 0;
+}
+.timeline-item:nth-child(odd){
+    padding-right: calc(50% + 30px);
+	text-align:end;
+}
+.timeline-item:nth-child(even){
+    padding-left: calc(50% + 30px);
+	
+}
+.timeline-dot{
+	height: 16px;
+	width: 16px;
+	background-color: #343434;
+	position: absolute;
+	left: calc(50% - 8px);
+	border-radius: 50%;
+	top:10px;
+}
+.timeline-date{
+	font-size: 18px;
+	color: #343434;
+	margin:6px 0 15px;
+}
+.timeline-content{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+    background-color: #343434;
+	padding: 26px;
+	border-radius: 5px;
+	text-align: end;
+}
+.timeline-content h3{
+
+    font-size: 20px;
+	color: #ffffff;
+	
+	margin-bottom: 1em;
+	text-transform: capitalize;
+	font-weight: 500;
+}
+.timeline-content p{
+	
+	text-align: justify;
+    color: #c8c8c8;
+	font-size: 16px;
+	font-weight: 300;
+	line-height: 22px;
+}
+
+@media(max-width: 767px){
+	.timeline-items::before{
+		left: 7px;
+	}
+	.timeline-item:nth-child(odd){
+		padding-right: 0;
+		text-align: left;
+	}
+	.timeline-item:nth-child(odd),
+	.timeline-item:nth-child(even){
+		padding-left: 37px;
+	}
+	.timeline-dot{
+		left:0;
+	}
+}
+
+
+
+
+
+
+
+
