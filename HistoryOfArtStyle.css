@@ -250,6 +250,20 @@ body{
 }
 
 @media(max-width: 767px){
+	.intro{
+		margin: -30px;
+		text-align: left;
+	
+	}
+	
+
+	.header{
+		width: 45em;
+		
+		
+		
+		
+	}
 	.timeline-items::before{
 		left: 7px;
 	}
