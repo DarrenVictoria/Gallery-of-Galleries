@@ -184,7 +184,7 @@ h1{
     position: relative;
 }
 
-.jesus-glow {
+.glow {
     width: 200px;
     height: 190px;
     left: 16px;
@@ -197,12 +197,12 @@ h1{
     transition: all 0.5s;
 }
 
-.card:hover .jesus-glow {
+.card:hover .glow {
     transform: scaleX(100%);
     background-color: #C38154;
 }
 
-.jesus-glow-2 {
+.glow-2 {
     width: 200px;
     height: 190px;
     left: 16px;
@@ -215,12 +215,12 @@ h1{
     transition: all 0.5s;
 }
 
-.card:hover .jesus-glow-2 {
+.card:hover .glow-2 {
     transform: scaleX(100%);
     background-color: #C8B6A6;
 }
 
-.jesus-glow-3 {
+.glow-3 {
     width: 200px;
     height: 190px;
     left: 16px;
@@ -233,7 +233,7 @@ h1{
     transition: all 0.5s;
 }
 
-.card:hover .jesus-glow-3 {
+.card:hover .glow-3 {
     transform: scaleX(100%);
     background-color: #CA955C;
 }
