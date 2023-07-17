@@ -260,11 +260,16 @@ h1{
 
 .nsbm-image
 {
-    width: 40%;
+    max-width: 500px;
     height: auto;
     border-radius: 10px 10px 10px 10px;
-    float: right;
     margin: 8px 0px 8px 8px;
+    float: right;
+}
+
+.clearfix
+{
+    overflow: auto;
 }
 
 .nsbm-image-top
@@ -275,6 +280,7 @@ h1{
     margin-bottom: 1.5rem;
     display: none;
 }
+
 .text{
     font-size: 16px;
     text-align: justify;
