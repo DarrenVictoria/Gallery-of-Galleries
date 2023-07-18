@@ -107,7 +107,9 @@ body{
 }
 
 /*My code (yvan) */
-
+body{
+	transition:all 1s;
+}
 .card-mid{
     border-radius: 25px;
     
@@ -249,20 +251,26 @@ body{
 	line-height: 22px;
 }
 
+
+
 @media(max-width: 767px){
+	main{
+		transform: scale(100%);
+	}
+	.img{
+
+		width: 20em;
+		
+	}
 	.intro{
-		margin: -30px;
-		text-align: left;
+		margin: 1em;
+		text-align: justify;
+		font-size: 15px;
 	
 	}
-	
-
 	.header{
-		width: 45em;
-		
-		
-		
-		
+		width: 40em;
+		font-size: 10px;	
 	}
 	.timeline-items::before{
 		left: 7px;
@@ -279,6 +287,45 @@ body{
 		left:0;
 	}
 }
+
+@media(min-width: 767px) and (max-width: 1500px){
+	main{
+		transform: scale(100%);
+	}
+	.img{
+
+		width: 20em;
+		
+	}
+	.intro{
+		margin: 1em;
+		text-align: justify;
+		font-size: 15px;
+	
+	}
+	.header{
+		width: 80em;
+		font-size: 10px;	
+	}
+	.timeline-items::before{
+		left: 7px;
+	}
+	.timeline-item:nth-child(odd){
+		padding-right: 0;
+		text-align: left;
+	}
+	.timeline-item:nth-child(odd),
+	.timeline-item:nth-child(even){
+		padding-left: 37px;
+	}
+	.timeline-dot{
+		left:0;
+	}
+}
+
+
+
+
 
 
 
