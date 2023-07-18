@@ -64,13 +64,13 @@ body{
 /*GalleryMap CSS*/
 
 h2{
-    font-family:'Inter', sans-serif;
+    font-family: 'Bebas Neue', cursive;
     text-align: center;
     font-weight: bold;
 }
 
 h1{
-    font-family:'Inter', sans-serif;
+    font-family: 'Bebas Neue', cursive;
     text-align: center;
     font-weight: 600;
     font-size: 70px;
@@ -146,3 +146,10 @@ h5{
     }
 }
 
+.btn{
+    background-color: #8e6f5b;
+}
+
+.hyperlinkclass{
+    color: white;
+}
