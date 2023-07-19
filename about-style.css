@@ -8,7 +8,7 @@ body {
 
 main{
     padding: 0 25px 25px 25px;
-    transition: all 0.80s ease-in-out 0.80s;
+    transition: all 0.90s ease-in-out 0.90s;
     transition-delay: 0ms;
 }
 
@@ -314,7 +314,7 @@ h1{
     transition: 0.5s;
 }
 
-@media screen and (max-width: 680px){
+@media screen and (max-width: 850px){
     .nsbm-image
     {
         display: none;
