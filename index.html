@@ -185,6 +185,24 @@
 
   </div>
 
+  <p class="Review-Form-Heading" > Leave your gallery experience as a review</p>
+
+  <form method="POST" action="Review.php" style="padding: 30px;">
+    <div class="form-group">
+      <label for="Name">Name</label>
+      <input type="text" class="form-control" name="Name" id="Name" aria-describedby="emailHelp" placeholder="Enter name">
+    </div>
+    <div class="form-group">
+      <label for="GalleryVisited">Gallery Visited</label>
+      <input type="text" class="form-control" name="Galleryvisited" id="GalleryVisited" aria-describedby="emailHelp" placeholder="Enter Gallery Visited">
+    </div>
+    <div class="form-group">
+      <textarea class="form-control" id="Review" name="freeform-review" rows="4" cols="50" placeholder="Enter review here..."></textarea>
+    </div>
+    
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+
   <!-- Footer -->
   <footer class="text-center text-lg-start bg-dark text-muted">
     <!-- Section: Links  -->
