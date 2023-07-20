@@ -1,3 +1,37 @@
+<?php
+$server = "localhost";
+$username = "root";
+$password = "";
+$db = "review";
+$conn = new mysqli($server, $username, $password, $db);
+
+if ($_SERVER['REQUEST_METHOD'] == "POST") {
+  $name = $_POST["name"];
+  $gallery = $_POST["gallery_visited"];
+  $review = $_POST["review"];
+
+  $sql = "INSERT INTO userreviews(ReviewerName,GalleryVisited,Review) VALUES ('$name','$gallery','$review')";
+
+  $result = $conn->query($sql);
+
+  if ($conn->error) {
+    echo "Something went wrong! <br> Error: <br> " . $conn->error;
+    exit();
+  } else {
+    echo "Your review has been added to the website.<br><a href=\"index.php\">Go Back</a>";
+    exit();
+  }
+
+  $conn->close();
+}
+
+$sql = "SELECT * FROM userreviews";
+
+$reviews = $conn->query($sql);
+$reviews->fetch_all();
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -6,8 +40,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
   <link rel="icon" type="image/x-icon" href="/assets/Logo/gallery-of-galleries-logo-zip-file/png/logo-no-background.ico">
   <title>Gallery of Galleries</title>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css"
-    integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
   <link rel="styleSheet" href="Style.css">
 
 </head>
@@ -20,8 +53,7 @@
     <a class="navbar-brand" href="index.html" style="padding: 0%; margin: 0%;">
       <img class="logo-main" style="width:150px; height:auto;" src="assets/Logo/gallery-of-galleries-logo-zip-file/png/logo-white-removebg small.png">
     </a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
 
@@ -67,10 +99,9 @@
   <!-- Card -->
   <div style="padding: 2%;">
     <div class="card-mid mb-3 changecolour inter">
-      <div class="row d-flex " >
+      <div class="row d-flex ">
         <div class=" card-image col-md-4">
-          <img src="assets/Images/Exhibition Redirect.jpg" class="img-fluid rounded-start" alt="Exhibition"
-            style="padding: 4%;  border-radius: 25px; "/>
+          <img src="assets/Images/Exhibition Redirect.jpg" class="img-fluid rounded-start" alt="Exhibition" style="padding: 4%;  border-radius: 25px; " />
         </div>
         <div class="col-md-8">
           <div class="card-body">
@@ -91,8 +122,7 @@
     <div class="card-mid mb-3 changecolour inter">
       <div class="row d-flex flex-row-reverse">
         <div class="card-image col-md-4">
-          <img src="assets/Images/Artist.jpg" class="img-fluid rounded-start" alt="Exhibition"
-            style="padding: 4%;  border-radius: 25px; "/>
+          <img src="assets/Images/Artist.jpg" class="img-fluid rounded-start" alt="Exhibition" style="padding: 4%;  border-radius: 25px; " />
         </div>
         <div class="card-content col-md-8">
           <div class="card-body d-flex flex-column">
@@ -116,14 +146,13 @@
         the exploration begin!</p>
       <button type="button" class="btn btn-outline-dark btn-lg">Visit to explore Galleries</button><br><br>
     </div>
-    
-    <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1-gRo0y-uDqMhGYnRDUVMDE2YPcFQi_w&ehbc=2E312F"
-        width="100%" height="550" style="border-radius: 25px; border-width: 0px;"></iframe>
-    </div>
 
-  <div class="card-columns " >
+    <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1-gRo0y-uDqMhGYnRDUVMDE2YPcFQi_w&ehbc=2E312F" width="100%" height="550" style="border-radius: 25px; border-width: 0px;"></iframe>
+  </div>
+
+  <div class="card-columns ">
     <div class="card  bg-dark">
-      <img class="card-img-top" src="assets/Images/Gallery 1 - A nerdy boy programming.jpg"  alt="Card image cap">
+      <img class="card-img-top" src="assets/Images/Gallery 1 - A nerdy boy programming.jpg" alt="Card image cap">
       <div class="card-body">
         <h5 class="card-title" style="color: aliceblue;">Nerdy boy programming</h5>
         <p class="card-text" style="color: aliceblue;">Prompt - Nerdy boy programming at a computer in a room full of gadgets, by makoto shinkai and ghibli studio, dramatic lighting, highly detailed, incredible quality</p>
@@ -136,7 +165,9 @@
 
     <div class="card p-3 text-right bg-dark">
       <blockquote class="blockquote mb-0">
-        <p style="color: aliceblue;"><quote>When robots become artists, it's a masterpiece of machine learning.</quote></p>
+        <p style="color: aliceblue;">
+          <quote>When robots become artists, it's a masterpiece of machine learning.</quote>
+        </p>
         <footer class="blockquote-footer">
           <small class="text-muted">
             AI <cite title="Source Title"></cite>
@@ -159,7 +190,9 @@
     </div>
     <div class="card p-3 text-right bg-dark">
       <blockquote class="blockquote mb-0">
-        <p style="color: aliceblue;"><quote>AI art: because sometimes machines can create beauty that humans can't even imagine.</quote></p>
+        <p style="color: aliceblue;">
+          <quote>AI art: because sometimes machines can create beauty that humans can't even imagine.</quote>
+        </p>
         <footer class="blockquote-footer">
           <small class="text-muted">
             AI <cite title="Source Title"></cite>
@@ -185,23 +218,44 @@
 
   </div>
 
-  <p class="Review-Form-Heading" > Leave your gallery experience as a review</p>
+  <p class="Review-Form-Heading"> Leave your gallery experience as a review</p>
 
-  <form method="POST" action="Review.php" style="padding: 30px;">
+  <form method="POST" action="index.php" style="padding: 30px;">
     <div class="form-group">
       <label for="Name">Name</label>
-      <input type="text" class="form-control" name="Name" id="Name" aria-describedby="emailHelp" placeholder="Enter name">
+      <input type="text" class="form-control" name="name" id="Name" aria-describedby="emailHelp" placeholder="Enter name">
     </div>
     <div class="form-group">
       <label for="GalleryVisited">Gallery Visited</label>
-      <input type="text" class="form-control" name="Galleryvisited" id="GalleryVisited" aria-describedby="emailHelp" placeholder="Enter Gallery Visited">
+      <input type="text" class="form-control" name="gallery_visited" id="GalleryVisited" aria-describedby="emailHelp" placeholder="Enter Gallery Visited">
     </div>
     <div class="form-group">
-      <textarea class="form-control" id="Review" name="freeform-review" rows="4" cols="50" placeholder="Enter review here..."></textarea>
+      <textarea class="form-control" id="Review" name="review" rows="4" cols="50" placeholder="Enter review here..."></textarea>
     </div>
-    
+
     <button type="submit" class="btn btn-primary">Submit</button>
   </form>
+
+  <div class="m-3">
+    <h3>Reviews</h3>
+    <?php
+    foreach ($reviews as $review) {
+      echo "
+        <div class=\"card single-review\">
+      <div class=\"card-header\">
+        " . $review['ReviewerName'] . "
+      </div>
+      <div class=\"card-body\">
+        <blockquote class=\"blockquote mb-0\">
+          <p>" . $review['Review'] . "</p>
+          <footer class=\"blockquote-footer\">Gallery: <i>" . $review['GalleryVisited'] . "</i></footer>
+        </blockquote>
+      </div>
+    </div>";
+    }
+    ?>
+
+  </div>
 
   <!-- Footer -->
   <footer class="text-center text-lg-start bg-dark text-muted">
@@ -307,15 +361,9 @@
 
 
 
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-    crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js"
-    integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
-    crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js"
-    integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
-    crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 
 </body>
 
