@@ -6,6 +6,12 @@ body {
     background-color: #ebebe3;
 }
 
+main{
+    padding: 0 25px 25px 25px;
+    transition: all 0.90s ease-in-out 0.90s;
+    transition-delay: 0ms;
+}
+
 .bodybgcolor {
     background-color: #ebebe3;
 }
@@ -82,14 +88,14 @@ body {
     transform: translate(0, 0%);
 }
 
+/* About Main */
 h1{
     font-size: 50px;
     color: #8e6f5b;
     font-family: inter;
     font-weight: 1000;
     font-style: bold;
-    margin: 24px;
-    margin-bottom: 50px;
+    margin: -20px 0 20px 0;
 }
 .card-wrapper
 {
@@ -105,7 +111,7 @@ h1{
     height: 420px;
     position: relative;
     background: #232323;
-    border-radius: 16.04px;
+    border-radius: 16px;
     overflow: hidden;
     border: 0.50px #4F4F4F solid;
     transition: all 0.5s;
@@ -114,6 +120,7 @@ h1{
 
 .card:hover{
     transform: scale(105%);
+    box-shadow: 10px 8px 7px rgba(0, 0, 0, 0.5);
 }
 .frame-1 {
     height: 130px;
@@ -246,10 +253,10 @@ h1{
 }
 
 .box{
-    margin: 24px 24px 24px 24px;
-    padding: 30px 30px 30px 30px;
+    margin: 24px;
+    padding: 30px;
     background-color: #ffffff;
-    border-radius: 12px;
+    border-radius: 16px;
 }
 .heading{
     font-size: 30px;
@@ -262,7 +269,7 @@ h1{
 {
     max-width: 500px;
     height: auto;
-    border-radius: 10px 10px 10px 10px;
+    border-radius: 16px;
     margin: 8px 0px 8px 8px;
     float: right;
 }
@@ -276,7 +283,7 @@ h1{
 {
     width: 100%;
     height: auto;
-    border-radius: 10px 10px 10px 10px;
+    border-radius: 16px;
     margin-bottom: 1.5rem;
     display: none;
 }
@@ -290,12 +297,13 @@ h1{
 .button{
     text-align: center;
     text-decoration: none;
-    color: white;
+    color: black;
+    border: 1px #5e3323 solid;
     font-size: 14px;
     padding: 8px;
     font-family: inter;
-    border-radius: 10px;
-    background-color: #8e6f5b;
+    border-radius: 16px;
+    background-color: rgba(0, 0, 0, 0.0);
     transition: all 0.5s;
 }
 
@@ -306,13 +314,17 @@ h1{
     transition: 0.5s;
 }
 
-@media screen and (max-width: 680px){
+@media screen and (max-width: 850px){
     .nsbm-image
     {
         display: none;
     }
-    .nsbm-image-top
-    {
-        display: block;
+    main {
+        transform: scale(102%);
+        margin-top: 50px;
+        margin-bottom: 15px;
+    }
+    h1{
+        text-align: center;
     }
 }
