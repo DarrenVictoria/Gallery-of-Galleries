@@ -384,8 +384,8 @@ h1{
 }
 
 .box{
-    margin: 24px;
     padding: 30px;
+    min-width: 320px;
     background-color: #ffffff;
     border-radius: 16px;
 }
@@ -450,11 +450,18 @@ h1{
     {
         display: none;
     }
-    main {
-        transform: scale(102%);
-        margin-top: 50px;
-        margin-bottom: 15px;
+    .nsbm-image-top
+    {
+        display: block;
     }
+    main {
+        transform: scale(90%);
+        margin-top: -380px;
+        margin-bottom: -250px;
+        align-content: center;
+        margin-left: -2px;
+    }
+    
     h1{
         text-align: center;
     }
