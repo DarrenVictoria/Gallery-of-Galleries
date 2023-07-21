@@ -66,6 +66,7 @@ $exhibitions->fetch_all();
     </div>
   </nav>
 
+  <a href="addExhibition.php" class="btn btn-primary">Add New Exhibition</a>
   <h1 class="category">Edit Exhibitions</h1>
   
         <?php
@@ -90,8 +91,14 @@ $exhibitions->fetch_all();
                                     Time: " . $exhibition['ExhibitionTime'] . "<br>
                                                    
                                 </p>
-                                <button type=\"button\" class=\"btn btn-outline-light\">Edit</button>
-                                <button type=\"button\" class=\"btn btn-outline-danger\">Delete</button>
+                                <form action=\"editExhibition.php\" method=\"get\">
+                                  <input type=\"hidden\" name=\"exhibitionName\" value=\"" . $exhibition['ExhibitionName'] . "\">
+                                  <input type=\"submit\" class=\"btn btn-outline-primary\" value=\"Edit\">
+                                </form>
+                                <form action=\"deleteExhibition.php\" method=\"post\">
+                                  <input type=\"hidden\" name=\"exhibitionName\" value=\"" . $exhibition['ExhibitionName'] . "\">
+                                  <input type=\"submit\" class=\"btn btn-outline-danger\" value=\"Delete\">
+                                </form>
                               </div>
                             </div>
                           </div>
