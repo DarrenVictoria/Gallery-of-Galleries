@@ -1,0 +1,238 @@
+@import url("https://fonts.googleapis.com/css?family=Inter");
+@import url('https://fonts.cdnfonts.com/css/bebas-neue');
+
+
+@media screen and (max-width: 850px) {
+    .img-fluid {
+        height: 400px;
+        max-height: auto;
+        width: 100%;
+        max-width: auto;
+        border-radius: 20px;
+        border-bottom-left-radius: 0%;
+        border-bottom-right-radius: 0%;
+        object-fit: cover;
+        filter: grayscale(0%)  ;
+
+    }
+
+    .img-fluid-2 {
+        height: 400px;
+        max-height: auto;
+        width: 100%;
+        max-width: auto;
+        border-radius: 20px;
+        border-bottom-left-radius: 0%;
+        border-bottom-right-radius: 0%;
+        object-fit: cover;
+        filter: grayscale(100%)  ;
+
+    }
+
+  
+    .flexbox-item{
+        display: flex;
+        width: auto;
+        height: auto;
+        max-width: 1300px;
+        flex-direction: column;
+        margin: 10px;
+        border: 1px solid #333;
+        border-radius: 20px;
+        background-color:#343434;
+        cursor: pointer;
+        will-change: transform;
+        transition: transform .2s;  
+    
+    }
+    .flexbox-item-4{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        
+    }
+    .date-time{
+        margin-left: 43px;
+        position: relative;
+        top: -80px;
+    }
+
+  }
+
+  @media screen and (min-width: 850px) {
+    .img-fluid{
+        height: 100%;
+        max-height: auto;
+        width: 100% fixed;
+        max-width: 300px;
+        border-radius: 20px; 
+        border-bottom-right-radius: 0%;  
+        border-top-right-radius: 0%;
+        object-fit: cover;
+        filter: grayscale(0%);
+    }
+
+    .img-fluid-2{
+        height: 100%;
+        max-height: auto;
+        width: 100% fixed;
+        max-width: 300px;
+        border-radius: 20px; 
+        border-bottom-right-radius: 0%;  
+        border-top-right-radius: 0%;
+        object-fit: cover;
+        filter: grayscale(100%);
+    }
+
+
+    .flexbox-item{
+        display: flex;
+        width: auto;
+        height: auto;
+        max-width: 1300px;
+        margin: 15px;
+        border: 1px solid #333;
+        border-radius: 20px;
+        background-color:#343434;
+        cursor: pointer;
+        will-change: transform;
+        transition: transform .2s;  
+    }
+    .flexbox-item-4{
+        display: flex;
+        flex-wrap: wrap;
+        
+    }
+    
+
+  }
+
+body{
+ background-color: #ebebe3;
+  }
+  
+
+
+
+
+.flexbox-container{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content:stretch;
+    background-color: #ebebe3;
+    width: auto;
+    height: auto;
+    padding-top: 30px;
+
+    
+}
+
+
+.button1{
+  position: absolute;
+  bottom: 10px;
+  right: 15px;
+  border-radius: 10px;
+  background-color: #343434; 
+  color: white; 
+  border: 2px solid white;
+  transition-duration: 0.5s;
+  cursor: pointer;
+  font-size: 16px;
+  margin: 4px 2px;
+  padding: 16px 32px;
+  
+}
+.button1:hover {
+    background-color: white;
+    color: #343434;
+
+}
+
+
+.text{
+    margin: 5%;
+    font-size: 20px;
+    border-radius: 20px;
+    background-color:#343434;
+    color: #f6fafb;
+    font-family: Inter;
+}
+
+
+.flexbox-item:hover{
+    -ms-transform: scale(1.01);
+    -webkit-transform: scale(1.01); 
+    transform: scale(1.01);
+}
+
+
+h1{
+    margin: 40px;
+}
+
+.p1{
+    font-family:'Bebas Neue' ;
+    font-size: 30px;
+    font-weight: 1000;
+}
+.content{
+    display: none;
+}
+.nav-bar-color{
+    background-color: #8e6f5b ;
+}
+.nav-logo{
+    color: f6fafb;
+    font-family: 'Inter', cursive;
+
+}
+.nav-link {
+    color: #f6fafb   !important;
+    font-family:'Inter', sans-serif;
+    font-size: 17px;
+    font-weight: 900;
+    padding: 0 10px;
+    text-transform: uppercase;
+    transition: all 0.3s ease 0s;
+}
+.top-marquee{
+    background-color: #5e3323;
+    color: aliceblue;
+    font-family: 'Inter', sans-serif;
+  
+}
+.category{
+    font-family: 'Bebas Neue', cursive;
+    font-size: 100px;
+    font-weight: 1000;
+    font-style: bold;
+    color: #343434;
+}
+
+.category-2{
+    font-family: 'Bebas Neue', cursive;
+    font-size: 80px;
+    font-weight: 1000;
+    font-style: bold;
+    color: #343434;
+}
+
+#ch:checked ~ #txt1{
+    display: block;
+}
+.category-3{
+    font-family: 'Bebas Neue', cursive;
+    font-size: 30px;
+    font-weight: 1000;
+    font-style: bold;
+    color: #343434;
+    text-align: left;
+    margin-top: 50px;
+}
+
+
+
+
