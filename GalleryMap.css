@@ -4,6 +4,17 @@
 
 /*Common to all*/
 
+.logo-main{
+    filter:none;
+
+    
+}
+.logo-main:hover{
+    filter: drop-shadow(3px 3px 3px #5e3323);
+    transition: all 1s;
+
+}
+
 
 body{
     background-color:#ebebe3 ;
@@ -16,8 +27,7 @@ body{
 .top-marquee{
     background-color: #5e3323;
     color: aliceblue;
-    font-family: 'Inter', sans-serif;
-  
+    font-family: 'Inter', sans-serif; 
 }
 
 /*bla bla*/
@@ -33,7 +43,7 @@ body{
 .nav-link {
     color: #f6fafb   !important;
     font-family:'Inter', sans-serif;
-    font-size: 12px;
+    font-size: 17px;
     font-weight: 900;
     padding: 0 10px;
     text-transform: uppercase;
@@ -60,13 +70,13 @@ body{
     font-weight: 1000;
     font-style: bold;
 }
-
 /*GalleryMap CSS*/
 
 h2{
     font-family: 'Bebas Neue', cursive;
     text-align: center;
     font-weight: bold;
+    font-size: 70px;
 }
 
 h1{
@@ -125,6 +135,8 @@ h5{
     right: 4.5%;
 }
 
+
+
 .carousel-inner{
     width: 80%;
     max-width: 1800px;
@@ -136,15 +148,22 @@ h5{
     h1 {
         font-size: 38px;
     }
-}
+    .carousel-inner{
+        display: flex;
+    }
+    .carousel-item {
+        display: flex;
+        flex: 0 0 100%; 
+        margin-right: 15px; 
+      }
 
-
-@media screen and (max-width: 768px){
-    .img-fluid{
-        height: 15em;
+      .img-fluid{
+        height: 20em;
         max-width: 100%;
     }
 }
+
+
 
 .btn{
     background-color: #8e6f5b;
@@ -153,3 +172,92 @@ h5{
 .hyperlinkclass{
     color: white;
 }
+
+.card-footer{
+    border: none;
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+}
+
+.btn{
+    border-color: transparent !important;
+}
+
+
+
+#carouselsmall1 .carousel-inner {
+    display: flex;
+    
+  }
+
+  #carouselsmall1 .carousel-item {
+    flex: 0 0 100%;
+    margin-right: 15px;
+  }
+
+  #carouselsmall1 .carousel-item:not(.active) {
+    display: none;
+  }
+
+  #carouselsmall1 .carousel-item.active {
+    display: block;
+  }
+
+  #carouselsmall1 .carousel-control-prev,
+  #carouselsmall1 .carousel-control-next {
+    cursor: pointer;
+  }
+
+
+
+
+
+  #carouselsmall2 .carousel-inner {
+    display: flex;
+    
+  }
+
+  #carouselsmall2 .carousel-item {
+    flex: 0 0 100%;
+    margin-right: 15px;
+  }
+
+  #carouselsmall2 .carousel-item:not(.active) {
+    display: none;
+  }
+
+  #carouselsmall2 .carousel-item.active {
+    display: block;
+  }
+
+  #carouselsmall2 .carousel-control-prev,
+  #carouselsmall2 .carousel-control-next {
+    cursor: pointer;
+  }
+  
+
+
+  #carouselsmall3 .carousel-inner {
+    display: flex;
+    
+  }
+
+  #carouselsmall3 .carousel-item {
+    flex: 0 0 100%;
+    margin-right: 15px;
+  }
+
+  #carouselsmall3 .carousel-item:not(.active) {
+    display: none;
+  }
+
+  #carouselsmall3 .carousel-item.active {
+    display: block;
+  }
+
+  #carouselsmall3 .carousel-control-prev,
+  #carouselsmall3 .carousel-control-next {
+    cursor: pointer;
+
+  }
