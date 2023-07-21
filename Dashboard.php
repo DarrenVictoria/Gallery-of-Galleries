@@ -1,3 +1,18 @@
+<?php
+$server = "localhost";
+$username = "root";
+$password = "";
+$db = "gallery";
+$conn = new mysqli($server, $username, $password, $db);
+
+$sql = "SELECT * FROM exhibitions ORDER BY ExhibitionStartDate DESC";   
+
+$exhibitions = $conn->query($sql);
+
+$exhibitions->fetch_all();
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -7,19 +22,21 @@
   <title>Template</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css"
     integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-  <link rel="styleSheet" href="Style.css">
+  <link rel="stylesheet" href="Dashboard.css">
 
 </head>
 
 <body>
+
   <marquee class="top-marquee" scrollamount="4">* Complimentary Gallery Exhibition happening on Tuesdays every other
     week *</marquee>
 
   <nav class="navbar navbar-expand-lg navbar-dark  nav-bar-color" style="margin-top: -6px;">
-    <a class="navbar-brand" href="index.html" style="padding: 0%; margin: 0%;">
-      <img class="logo-main" style="width:150px; height:auto;" src="assets/Logo/gallery-of-galleries-logo-zip-file/png/logo-white-removebg small.png">
+    <a class="navbar-brand" href="index.html">
+      <p class="nav-logo" style="margin-top: 5%;">Gallery of Galleries</p>
     </a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
 
@@ -33,7 +50,7 @@
           <a class="nav-link" href="#">Top Artists&nbsp;&nbsp;</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="GalleryMap.html">Gallery Map&nbsp;&nbsp;</a>
+          <a class="nav-link" href="#">Gallery Map&nbsp;&nbsp;</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#">History of Art&nbsp;&nbsp;</a>
@@ -42,14 +59,61 @@
           <a class="nav-link" href="#">Art Display Gallery&nbsp;&nbsp;</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="aboutus.html">About&nbsp;&nbsp;</a>
+          <a class="nav-link" href="#">About&nbsp;&nbsp;</a>
         </li>
 
       </ul>
     </div>
   </nav>
 
+  <h1 class="category">Edit Exhibitions</h1>
+  
+        <?php
+              
+              foreach ($exhibitions as $exhibition) {
+                
+                echo "
+                    <div style=\"padding: 2%;\">
+                        <div class=\"card-mid mb-3 changecolour inter\">
+                          <div class=\"row d-flex \">
+                            <div class=\" card-image col-md-4\">
+                              <img src=\"". $exhibition['ExhibitionImage'] ."\" class=\"img-fluid rounded-start\" alt=\"Exhibition\" style=\"padding: 4%;  border-radius: 25px; \" />
+                            </div>
+                            <div class=\"col-md-8\">
+                              <div class=\"card-body\">
+                                <h5 class=\"card-title bebas-neue-sub\">". $exhibition['ExhibitionName'] ."</h5>
+                                <p class=\"card-text\">
+                                    Location: " .$exhibition['ExhibitionLocation'] . "<br>
+                                    Gallery :" . $exhibition['ExhibitionGallery'] . "<br>
+                                    Start date : ". $exhibition['ExhibitionStartDate'] . "<br>
+                                    End date : " . $exhibition['ExhibitionEndDate'] . "<br>
+                                    Time: " . $exhibition['ExhibitionTime'] . "<br>
+                                                   
+                                </p>
+                                <button type=\"button\" class=\"btn btn-outline-light\">Edit</button>
+                                <button type=\"button\" class=\"btn btn-outline-danger\">Delete</button>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+               
+                ";
+              
+              }
+              
+            
+              
+              ?>
 
+
+  
+ 
+
+   
+    
+ 
+  
  
 
   <!-- Footer -->
@@ -125,7 +189,19 @@
           </div>
           <!-- Grid column -->
 
-          
+          <!-- Grid column -->
+          <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+            <!-- Links -->
+            <br>
+            <h6 class="text-uppercase fw-bold mb-4">Contact</h6>
+            <p><i class="fas fa-home me-3 text-secondary"></i> New York, NY 10012, US</p>
+            <p>
+              <i class="fas fa-envelope me-3 text-secondary"></i>
+              info@example.com
+            </p>
+            <p><i class="fas fa-phone me-3 text-secondary"></i> + 01 234 567 88</p>
+            <p><i class="fas fa-print me-3 text-secondary"></i> + 01 234 567 89</p>
+          </div>
           <!-- Grid column -->
         </div>
         <!-- Grid row -->
@@ -147,7 +223,7 @@
 
 
 
-
+  
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
     integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
     crossorigin="anonymous"></script>

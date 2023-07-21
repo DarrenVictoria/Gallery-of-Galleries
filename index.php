@@ -2,7 +2,7 @@
 $server = "localhost";
 $username = "root";
 $password = "";
-$db = "review";
+$db = "gallery";
 $conn = new mysqli($server, $username, $password, $db);
 
 if ($_SERVER['REQUEST_METHOD'] == "POST") {
@@ -235,27 +235,36 @@ $reviews->fetch_all();
 
     <button type="submit" class="btn btn-primary">Submit</button>
   </form>
-
-  <div class="m-3">
+  
+  <div class="m-3 ">
     <h3>Reviews</h3>
-    <?php
-    foreach ($reviews as $review) {
-      echo "
-        <div class=\"card single-review\">
-      <div class=\"card-header\">
-        " . $review['ReviewerName'] . "
-      </div>
-      <div class=\"card-body\">
-        <blockquote class=\"blockquote mb-0\">
-          <p>" . $review['Review'] . "</p>
-          <footer class=\"blockquote-footer\">Gallery: <i>" . $review['GalleryVisited'] . "</i></footer>
-        </blockquote>
-      </div>
-    </div>";
-    }
-    ?>
+    <div style="border:1px solid; border-color:#ff00ff; height:50rem; overflow:scroll;" width="100%">
+        <?php
+        
+        foreach ($reviews as $review) {
+          
+          echo "
+            <div class=\"card single-review\">
+          <div class=\"card-header\"> Visited
+            "  . $review['GalleryVisited']  . "
+          </div>
+          <div class=\"card-body\">
+            <blockquote class=\"blockquote mb-0\">
+              <p>" . $review['Review'] . "</p>
+              <footer class=\"blockquote-footer\">Posted by : <i>" .$review['ReviewerName']. "</i></footer>
+            </blockquote>
+          </div>
+        </div>";
+        
+        }
+        
+      
+        
+        ?>
+    </div>
 
   </div>
+  
 
   <!-- Footer -->
   <footer class="text-center text-lg-start bg-dark text-muted">
