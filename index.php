@@ -1,12 +1,46 @@
+<?php
+$server = "localhost";
+$username = "root";
+$password = "";
+$db = "gallery";
+$conn = new mysqli($server, $username, $password, $db);
+
+if ($_SERVER['REQUEST_METHOD'] == "POST") {
+  $name = $_POST["name"];
+  $gallery = $_POST["gallery_visited"];
+  $review = $_POST["review"];
+
+  $sql = "INSERT INTO userreviews(ReviewerName,GalleryVisited,Review) VALUES ('$name','$gallery','$review')";
+
+  $result = $conn->query($sql);
+
+  if ($conn->error) {
+    echo "Something went wrong! <br> Error: <br> " . $conn->error;
+    exit();
+  } else {
+    echo "Your review has been added to the website.<br><a href=\"index.php\">Go Back</a>";
+    exit();
+  }
+
+  $conn->close();
+}
+
+$sql = "SELECT * FROM userreviews";
+
+$reviews = $conn->query($sql);
+$reviews->fetch_all();
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-  <title>Homepage</title>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css"
-    integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <link rel="icon" type="image/x-icon" href="/assets/Logo/gallery-of-galleries-logo-zip-file/png/logo-no-background.ico">
+  <title>Gallery of Galleries</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
   <link rel="styleSheet" href="Style.css">
 
 </head>
@@ -15,18 +49,11 @@
   <marquee class="top-marquee" scrollamount="4">* Complimentary Gallery Exhibition happening on Tuesdays every other
     week *</marquee>
 
-<<<<<<< Updated upstream:index.html
-  <nav class="navbar navbar-expand-lg navbar-dark  nav-bar-color" style="margin-top: -6px;">
-    <a class="navbar-brand" href="index.html">
-      <p class="nav-logo" style="margin-top: 5%;">Gallery of Galleries</p>
-=======
   <nav class="navbar navbar-expand-lg navbar-dark nav-bar-color" style="margin-top: -6px;">
     <a class="navbar-brand" href="index.php" style="padding: 0%; margin: 0%;">
       <img class="logo-main" style="width:150px; height:auto;" src="assets/Logo/gallery-of-galleries-logo-zip-file/png/logo-white-removebg small.png">
->>>>>>> Stashed changes:index.php
     </a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
 
@@ -34,24 +61,6 @@
       <ul class="navbar-nav ml-auto" style="gap: .5rem;">
 
         <li class="nav-item">
-<<<<<<< Updated upstream:index.html
-          <a class="nav-link" href="#">Exhibitions &nbsp;&nbsp;</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Top Artists&nbsp;&nbsp;</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Gallery Map&nbsp;&nbsp;</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">History of Art&nbsp;&nbsp;</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Art Display Gallery&nbsp;&nbsp;</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">About&nbsp;&nbsp;</a>
-=======
           <a class="nav-link" href="Exhibition.php">Exhibitions</a>
         </li>
         <li class="nav-item">
@@ -71,7 +80,6 @@
         </li>
         <li class="nav-item"> 
           <a href="login.php"><button name="login" class="login btn btn-primary nav-link">Login</button></a>
->>>>>>> Stashed changes:index.php
         </li>
       </ul>
     </div>
@@ -93,10 +101,9 @@
   <!-- Card -->
   <div style="padding: 2%;">
     <div class="card-mid mb-3 changecolour inter">
-      <div class="row  " >
-        <div class="col-md-4">
-          <img src="assets/Images/Exhibition Redirect.jpg" class="img-fluid rounded-start" alt="Exhibition"
-            style="padding: 4%;  border-radius: 25px; "/>
+      <div class="row d-flex ">
+        <div class=" card-image col-md-4">
+          <img src="assets/Images/Exhibition Redirect.jpg" class="img-fluid rounded-start" alt="Exhibition" style="padding: 4%;  border-radius: 25px; " />
         </div>
         <div class="col-md-8">
           <div class="card-body">
@@ -105,7 +112,7 @@
               diverse collection of masterpieces, from paintings to sculptures, each telling a unique story. Immerse
               yourself in the artist's vision through interactive elements and informative descriptions. Click now to
               embark on an awe-inspiring artistic journey.</p>
-            <button type="button" class="btn btn-outline-light btn-lg">Exhibitions Calendar</button>
+            <button type="button" class="btn btn-outline-light btn-lg align-self-md-end ">Exhibitions Calendar</button>
           </div>
         </div>
       </div>
@@ -117,8 +124,7 @@
     <div class="card-mid mb-3 changecolour inter">
       <div class="row d-flex flex-row-reverse">
         <div class="card-image col-md-4">
-          <img src="assets/Images/Artist.jpg" class="img-fluid rounded-start" alt="Exhibition"
-            style="padding: 4%;  border-radius: 25px; "/>
+          <img src="assets/Images/Artist.jpg" class="img-fluid rounded-start" alt="Exhibition" style="padding: 4%;  border-radius: 25px; " />
         </div>
         <div class="card-content col-md-8">
           <div class="card-body d-flex flex-column">
@@ -126,7 +132,7 @@
             <p class="card-text text-md-right">Explore our virtual artists hub and discover a world of creativity. From painters to photographers, our platform
               showcases diverse talents. Connect with captivating artists and be inspired by their works. Click now to dive
               into the vibrant community and embark on an unforgettable artistic journey.</p>
-            <button type="button" class="btn btn-outline-light btn-lg align-self-md-end">Exhibitions Calendar</button>
+            <button type="button" class="btn btn-outline-light btn-lg align-self-md-end">View top artists</button>
           </div>
         </div>
       </div>
@@ -142,62 +148,63 @@
         the exploration begin!</p>
       <button type="button" class="btn btn-outline-dark btn-lg">Visit to explore Galleries</button><br><br>
     </div>
-    
-    <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1-gRo0y-uDqMhGYnRDUVMDE2YPcFQi_w&ehbc=2E312F"
-        width="100%" height="550" style="border-radius: 25px; border-width: 0px;"></iframe>
-    </div>
 
-  <div class="card-columns " >
+    <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1-gRo0y-uDqMhGYnRDUVMDE2YPcFQi_w&ehbc=2E312F" width="100%" height="550" style="border-radius: 25px; border-width: 0px;"></iframe>
+  </div>
+
+  <div class="card-columns ">
     <div class="card  bg-dark">
-      <img class="card-img-top" src="assets/Images/Art Gallery 1.jpg" alt="Card image cap">
+      <img class="card-img-top" src="assets/Images/Gallery 1 - A nerdy boy programming.jpg" alt="Card image cap">
       <div class="card-body">
-        <h5 class="card-title" style="color: aliceblue;">Sunrise over lake</h5>
-        <p class="card-text" style="color: aliceblue;">This is a longer card with supporting text below as a natural
-          lead-in to additional content. This content is a little bit longer.</p>
+        <h5 class="card-title" style="color: aliceblue;">Nerdy boy programming</h5>
+        <p class="card-text" style="color: aliceblue;">Prompt - Nerdy boy programming at a computer in a room full of gadgets, by makoto shinkai and ghibli studio, dramatic lighting, highly detailed, incredible quality</p>
       </div>
     </div>
 
     <div class="card bg-dark" style="height: 19vw; overflow: hidden;  ">
-      <img class="card-img" src="assets/Images/Art Gallery 3.jpg" alt="Card image">
+      <img class="card-img" src="assets/Images/Gallery 2 - Cute and adorable darkside waving and smiling gree.jpg" alt="Card image">
     </div>
 
     <div class="card p-3 text-right bg-dark">
       <blockquote class="blockquote mb-0">
-        <p style="color: aliceblue;">Art speaks where words are unable to explain.</p>
+        <p style="color: aliceblue;">
+          <quote>When robots become artists, it's a masterpiece of machine learning.</quote>
+        </p>
         <footer class="blockquote-footer">
           <small class="text-muted">
-            Someone unknown <cite title="Source Title"></cite>
+            AI <cite title="Source Title"></cite>
           </small>
         </footer>
       </blockquote>
     </div>
 
     <div class="card bg-dark">
-      <img class="card-img-top" src="assets/Images/Art Gallery 2.jpg" alt="Card image cap">
+      <img class="card-img-top" src="assets/Images/Gallery 3 - fusion of a robot monster with an alien in the spa.jpg" alt="Card image cap">
       <div class="card-body">
-        <h5 class="card-title" style="color: aliceblue;">3 Sceneries in a Gold Room</h5>
-        <p class="card-text" style="color: aliceblue;">This card has supporting text below as a natural lead-in to
-          additional content.</p>
+        <h5 class="card-title" style="color: aliceblue;">Fusion of a robot monster</h5>
+        <p class="card-text" style="color: aliceblue;">Prompt - Fusion of a robot monster with an alien in the space, style of laurie greasley, studio ghibli, akira toriyama, james gilleard, genshin impact, trending pixiv fanbox, trending on artstation, low details, light colors, dark background, sharp shadows, sharp colors, simple, no complexity, make it as simple as possible, no deep details, low details</p>
 
       </div>
     </div>
 
     <div class="card bg-dark">
-      <img class="card-img" src="assets/Images/Art Gallery 3.jpg" alt="Card image">
+      <img class="card-img" src="assets/Images/Gallery 4 - Man holding a flashlight on a school at night.jpg" alt="Card image">
     </div>
     <div class="card p-3 text-right bg-dark">
       <blockquote class="blockquote mb-0">
-        <p style="color: aliceblue;">Art speaks where words are unable to explain.</p>
+        <p style="color: aliceblue;">
+          <quote>AI art: because sometimes machines can create beauty that humans can't even imagine.</quote>
+        </p>
         <footer class="blockquote-footer">
           <small class="text-muted">
-            Someone unknown <cite title="Source Title"></cite>
+            AI <cite title="Source Title"></cite>
           </small>
         </footer>
       </blockquote>
     </div>
 
     <div class="card bg-dark">
-      <img class="card-img" src="assets/Images/Art Gallery 3.jpg" alt="Card image">
+      <img class="card-img" src="assets/Images/Gallery 5 - Iridescent.jpg" alt="Card image">
     </div>
 
     <div class="card inter" style="margin: 2%; background-color:#b9a684; border-width : 0">
@@ -213,14 +220,58 @@
 
   </div>
 
+  <p class="Review-Form-Heading"> Leave your gallery experience as a review</p>
+
+  <form method="POST" action="index.php" style="padding: 30px;">
+    <div class="form-group">
+      <label for="Name">Name</label>
+      <input type="text" class="form-control" name="name" id="Name" aria-describedby="emailHelp" placeholder="Enter name">
+    </div>
+    <div class="form-group">
+      <label for="GalleryVisited">Gallery Visited</label>
+      <input type="text" class="form-control" name="gallery_visited" id="GalleryVisited" aria-describedby="emailHelp" placeholder="Enter Gallery Visited">
+    </div>
+    <div class="form-group">
+      <textarea class="form-control" id="Review" name="review" rows="4" cols="50" placeholder="Enter review here..."></textarea>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+  
+  <div class="m-3 ">
+    <h3>Reviews</h3>
+    <div style="border:1px solid; border-color:#8e6f5b; border-radius:20px; height:50rem; overflow:scroll;" width="100%">
+        <?php
+        
+        foreach ($reviews as $review) {
+          
+          echo "
+            <div class=\"card single-review\">
+          <div class=\"card-header\"> Visited
+            "  . $review['GalleryVisited']  . "
+          </div>
+          <div class=\"card-body\">
+            <blockquote class=\"blockquote mb-0\">
+              <p>" . $review['Review'] . "</p>
+              <footer class=\"blockquote-footer\">Posted by : <i>" .$review['ReviewerName']. "</i></footer>
+            </blockquote>
+          </div>
+        </div>";
+        
+        }
+        
+      
+        
+        ?>
+    </div>
+
+  </div>
+  
+
   <!-- Footer -->
   <footer class="text-center text-lg-start bg-dark text-muted">
-
-
-
-
     <!-- Section: Links  -->
-    <section class="page-footer">
+    <section class="page-footer" style="padding:10px">
       <div class="container text-center text-md-start mt-5" style=>
         <!-- Grid row -->
         <div class="row mt-3">
@@ -247,19 +298,19 @@
               Pages
             </h6>
             <p>
-              <a href="#!" class="text-reset">Exhibitions</a>
+              <a href="Exhibitions.php" class="text-reset">Exhibitions</a>
             </p>
             <p>
-              <a href="#!" class="text-reset">Top Artists</a>
+              <a href="Artists.html" class="text-reset">Top Artists</a>
             </p>
             <p>
-              <a href="#!" class="text-reset">Gallery Map</a>
+              <a href="GalleryMap.html" class="text-reset">Gallery Map</a>
             </p>
             <p>
-              <a href="#!" class="text-reset">History of Art</a>
+              <a href="HistoryOfArt.html" class="text-reset">History of Art</a>
             </p>
             <p>
-              <a href="#!" class="text-reset">Art Gallery Display</a>
+              <a href="AI Art.html" class="text-reset">Art Gallery Display</a>
             </p>
           </div>
           <!-- Grid column -->
@@ -272,20 +323,16 @@
               Edit Dashboard
             </h6>
             <p>
-              <a href="#!" class="text-reset">Login</a>
+              <a href="Login.php" class="text-reset">Login to system</a>
             </p>
             <p>
-<<<<<<< Updated upstream:index.html
-              <a href="#!" class="text-reset">Settings</a>
-=======
               <a href="Dashboard.php" class="text-reset">Dashboard</a>
->>>>>>> Stashed changes:index.php
             </p>
             <p>
-              <a href="#!" class="text-reset">Orders</a>
+              <a href="#!" class="text-reset"></a>
             </p>
             <p>
-              <a href="#!" class="text-reset">Help</a>
+              <a href="#!" class="text-reset"></a>
             </p>
           </div>
           <!-- Grid column -->
@@ -295,18 +342,13 @@
             <!-- Links -->
             <br>
             <h6 class="text-uppercase fw-bold mb-4">Contact</h6>
-            <p><i class="fas fa-home me-3 text-secondary"></i> New York, NY 10012, US</p>
+            <p><i class="fas fa-home me-3 text-secondary"></i> Colombo 07 , Sri Lanka</p>
             <p>
               <i class="fas fa-envelope me-3 text-secondary"></i>
-              info@example.com
+              galleryofgalleries@artists.com
             </p>
-<<<<<<< Updated upstream:index.html
-            <p><i class="fas fa-phone me-3 text-secondary"></i> + 01 234 567 88</p>
-            <p><i class="fas fa-print me-3 text-secondary"></i> + 01 234 567 89</p>
-=======
             <p>+ 94 713456484</p>
             <p>+94 703412996</p>
->>>>>>> Stashed changes:index.php
           </div>
           <!-- Grid column -->
         </div>
@@ -330,15 +372,9 @@
 
 
 
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-    crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js"
-    integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
-    crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js"
-    integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
-    crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 
 </body>
 

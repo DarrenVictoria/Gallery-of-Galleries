@@ -1,0 +1,150 @@
+@import url("https://fonts.googleapis.com/css?family=Inter");
+@import url('https://fonts.cdnfonts.com/css/bebas-neue');
+
+
+main {
+  overflow-x: hidden;
+  display: flex;
+}
+
+h1 {
+  margin: 0;
+  padding: 0;
+}
+
+section {
+  min-width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+section:nth-child(even) {
+  background-color: #8e6f5b !important;
+  color: #f6fafb  ;
+}
+
+
+
+/*Common to all*/
+
+.logo-main{
+    filter:none;
+
+    
+}
+.logo-main:hover{
+    filter: drop-shadow(3px 3px 3px #5e3323);
+    transition: all 1s;
+
+}
+
+
+
+.bodybgcolor{
+    background-color:#ebebe3  ;
+}
+
+.top-marquee{
+    background-color: #5e3323;
+    color: aliceblue;
+    font-family: 'Inter', sans-serif;
+  
+}
+
+.nav-bar-color{
+    background-color: #8e6f5b ;
+}
+.nav-logo{
+    color: f6fafb;
+    font-family: 'Inter', cursive;
+
+}
+.nav-link {
+    color: #f6fafb   !important;
+    font-family:'Inter', sans-serif;
+    font-size: 17px;
+    font-weight: 900;
+    padding: 0 10px;
+    text-transform: uppercase;
+    transition: all 0.3s ease 0s;
+}
+
+.changecolour{
+    background-color: #343434;
+}
+.inter{
+    font-family: 'Inter', sans-serif;
+    color: aliceblue;
+}
+.bebas-neue{
+    font-family: 'Bebas Neue', cursive;
+    font-size: 100px;
+    font-weight: 1000;
+    font-style: bold;
+}
+
+.bebas-neue-sub{
+    font-family: 'Bebas Neue', cursive;
+    font-size: 30px;
+    font-weight: 1000;
+    font-style: bold;
+}
+
+.AI-Gallery-Heading {
+  font-family: 'Inter', cursive;
+  color:#8e6f5b ;
+  font-size: 40px;
+  font-weight: 800;
+  font-style: bold;
+
+
+}
+
+.AI-Gallery-SubHeading {
+  font-family: 'Inter', cursive;
+  color:#8e6f5b ;
+  font-size: 10px;
+  font-weight: 800;
+  font-style: bold;
+
+
+}
+
+.right-arrow{
+  position: absolute;
+  top: 50%;
+  right: 0%;
+  z-index: 999;
+  color: #000;
+  background: white;
+  padding: 10px ;
+  border-radius: 10px;
+  box-shadow: rgb(50 50 93 / 25%) 0 0 100px -20px, rgb(0 0 0 / 30%) 0 0 60px -15px;
+  margin:5em;
+}
+.right-arrow:hover{
+    background: #d5d5d5;
+    box-shadow: rgb(50 50 93 / 25%) 0 0 100px -20px, rgb(0 0 0 / 30%) 0 0 60px 0px;
+    margin:5em;
+}
+
+.left-arrow{
+  position: absolute;
+  top: 50%;
+  left: 0%;
+  z-index: 999;
+  color: #000;
+  background: white;
+  padding: 10px ;
+  border-radius: 10px;
+  box-shadow: rgb(50 50 93 / 25%) 0 0 100px -20px, rgb(0 0 0 / 30%) 0 0 60px -15px;
+  margin:5em;
+}
+.left-arrow:hover{
+    background: #d5d5d5;
+    box-shadow: rgb(50 50 93 / 25%) 0 0 100px -20px, rgb(0 0 0 / 30%) 0 0 60px 0px;
+    margin:5em;
+}
