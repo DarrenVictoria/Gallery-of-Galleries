@@ -1,0 +1,191 @@
+@import url("https://fonts.googleapis.com/css?family=Inter");
+@import url('https://fonts.cdnfonts.com/css/bebas-neue');
+
+ /*Common to all*/
+
+ .logo-main {
+     filter: none;
+ }
+
+ .logo-main:hover {
+     filter: drop-shadow(3px 3px 3px #5e3323);
+     transition: all 1s;
+
+ }
+
+ img {
+    width: 100%;
+    height: auto;
+    filter: sepia(80%);
+    transition: all 1s;
+    border-radius: 16px;
+    border: 4px #ebebe3 solid;
+ }
+
+ .card:hover img {
+    filter: sepia(0%);
+    border-color: black;
+ }
+
+ body {
+     background-color: #ebebe3;
+ }
+
+ .bodybgcolor {
+     background-color: #ebebe3;
+ }
+
+ .top-marquee {
+     background-color: #5e3323;
+     color: aliceblue;
+     font-family: 'Inter', sans-serif;
+
+ }
+
+ /*bla bla*/
+
+ .nav-bar-color {
+     background-color: #8e6f5b;
+ }
+
+ .nav-logo {
+     color: f6fafb;
+     font-family: 'Inter', cursive;
+
+ }
+
+ .nav-link {
+     color: #f6fafb !important;
+     font-family: 'Inter', sans-serif;
+     font-size: 17px;
+     font-weight: 900;
+     padding: 0 10px;
+     text-transform: uppercase;
+     transition: all 0.3s ease 0s;
+ }
+
+ .changecolour {
+     background-color: #343434;
+ }
+
+ .inter{
+     font-family: 'Inter', sans-serif;
+     color: aliceblue;
+ }
+
+ .bebas-neue {
+     font-family: 'Bebas Neue', cursive;
+     font-size: 100px;
+     font-weight: 1000;
+     font-style: bold;
+ }
+
+ .bebas-neue-sub {
+     font-family: 'Bebas Neue', cursive;
+     font-size: 30px;
+     font-weight: 1000;
+     font-style: bold;
+ }
+
+ /*  top artists */
+
+ h1 {
+     font-size: 50px;
+     color: #8e6f5b;
+     font-family: inter;
+     font-weight: 1000;
+     font-style: bold;
+     margin: -20px 0 20px 15px;
+ }
+ 
+.card-wrapper{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    flex-wrap: wrap;
+    padding: auto;
+}
+ 
+
+.card{
+    max-width: 400px;
+    height: 500px;
+    position: relative;
+    background: #c1b09e;
+    border-radius: 16px;
+    overflow: hidden;
+    border: 0.50px #4F4F4F solid;
+    transition: all 0.5s;
+    padding: 10px;
+    object-fit: cover;
+}
+
+ .image-frame{
+    height:360px;
+    width: 360px;
+    transition: all 1s;
+    overflow: none;
+    object-fit: cover;
+   
+ }
+
+ .image-frame img{
+    height: 360px;
+    width: 360px;
+    
+ }
+
+.body-text h5{
+    margin-top: 20px;
+    font-size: 20px;
+    text-align: justify;
+}
+
+.body-text{
+    font-family: inter;
+}
+
+.card:hover{
+    box-shadow: 10px 8px 7px rgba(0, 0, 0, 0.5);
+}
+.body-text{
+    padding-left: 5px;
+}
+
+.body-text .readme{
+    background-color: rgba(0, 0, 0, 0);
+    font-family: inter;
+    position: relative;
+    padding: 5px;
+    left: 260px;
+    top: -20px;
+    border: 1px solid #5e3323;
+    border-radius: 16px;
+    color: #5e3323;
+    margin-left: -5px;
+}
+
+.body-text .readme:hover{
+    background-color: #5e3323;    
+    color: #c1b09e;
+    transition: 0.5s;
+}
+
+@media screen and (max-width: 680px) {
+    .nsbm-image {
+        display: none;
+    }
+
+    main {
+        transform: scale(102%);
+        margin-top: 50px;
+        margin-bottom: 15px;
+    }
+
+    h1 {
+        text-align: center;
+    }
+}
+ 
