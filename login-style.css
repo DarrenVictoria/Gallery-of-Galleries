@@ -1,0 +1,188 @@
+
+@import url("https://fonts.googleapis.com/css?family=Inter");
+@import url('https://fonts.cdnfonts.com/css/bebas-neue');
+
+/*Common to all*/
+
+img {
+    filter: sepia(100%);
+    transition: all 3s;
+  }
+
+img:hover {
+    filter: sepia(0%);
+    
+  }
+
+body{
+    background-color:#ebebe3 ;
+    overflow: auto;
+}
+
+.bodybgcolor{
+    background-color:#ebebe3  ;
+}
+
+.top-marquee{
+    background-color: #5e3323;
+    color: aliceblue;
+    font-family: 'Inter', sans-serif;
+  
+}
+
+/*bla bla*/
+nav img{
+    margin: 10px;
+    position: relative;
+    width: 4%;
+    transition: all .4s ease-in-out;
+}
+
+nav img:hover{
+    transform: scale(104%);
+}
+
+.changecolour{
+    background-color: #343434;
+}
+.inter{
+    font-family: 'Inter', sans-serif;
+    color: aliceblue;
+}
+.bebas-neue{
+    font-family: 'Bebas Neue', cursive;
+    font-size: 100px;
+    font-weight: 1000;
+    font-style: bold;
+}
+
+.bebas-neue-sub{
+    font-family: 'Bebas Neue', cursive;
+    font-size: 30px;
+    font-weight: 1000;
+    font-style: bold;
+}
+
+/* Home Page */
+.card-mid{
+    border-radius: 25px;
+    
+}
+
+.card-mid .row{
+    align-items: center;
+}
+
+.centertopcardtext{
+    position:relative;
+    top:50%;
+    transform: translate(0,-50%);
+}
+
+.centertopcardsubtext{
+    position:absolute;
+    top: 70%;
+    transform: translate(0,0%);
+}
+
+/*Login Page*/
+main{
+    padding: 12% 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.form-wrapper{
+    width: 400px;
+    padding: 40px 20px;
+    background-color: #5e3323;
+    color: #ebebe3;
+    border-radius: 16px;
+    background-color: transparent;
+    border: 2px solid #5e3323;
+    transition: all .5s ease;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+}
+
+.form-wrapper h1{
+    font-size: 50px;
+    text-align: center;
+    color: #5e3323;
+}
+.input-box{
+    position: relative;
+    width: 100%;
+    height: 40px;
+    margin: 30px 0;
+}
+.input-box input{
+    height: 100%;
+    width: 100%;
+    border: none;
+    outline: none;
+    border: 2px solid #5e3323;
+    background-color: transparent;
+    border-radius: 40px;
+    font-size: 20px;
+    color: #5e3323;
+    padding: 20px 45px 20px 20px;
+    transition: all .5s ease;
+}
+
+.input-box input::placeholder
+{
+    color: #5e3323;
+}
+
+.input-box input:focus
+{
+    scale: 104%;
+}
+
+.input-box-icon{
+    width: 8%;
+    position: absolute;
+    right: 15px;
+    top: 20%;
+}
+
+.sub-btn{
+    width: 100%;
+    height: 40px;
+    background-color: #8e6f5b;
+    border: none;
+    outline: none;
+    border-radius: 40px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+    cursor: pointer;
+    font-size:20px;
+    color: black;
+    font-weight: 600;
+    transition: all 0.4s ease;
+}
+
+.sub-btn:hover{
+    background-color: #5e3323;
+    color: #ebebe3;
+    font-size: 22px;
+}
+
+@media screen and (max-width: 850px){
+    nav img{
+        transform: scale(220%);
+    }
+    nav img:hover{
+        transform: scale(250%);
+    }
+    body{
+        padding: 20px;
+    }
+    main{
+        padding: 24% 0;
+    }
+    .form-wrapper{
+        transform: scale(80%);
+    }
+}

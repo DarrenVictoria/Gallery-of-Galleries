@@ -1,4 +1,9 @@
 <?php
+session_start();
+if (!isset($_SESSION['adminLoginID']))
+{
+  header("location: login.php");
+}
 $server = "localhost";
 $username = "root";
 $password = "";

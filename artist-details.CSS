@@ -1,0 +1,209 @@
+@import url("https://fonts.googleapis.com/css?family=Inter");
+@import url('https://fonts.cdnfonts.com/css/bebas-neue');
+
+/*Common to all*/
+
+.logo-main{
+    filter:none;
+
+    
+}
+.logo-main:hover{
+    filter: drop-shadow(3px 3px 3px #5e3323);
+    transition: all 1s;
+
+}
+
+img {
+    filter: sepia(80%);
+    transition: all 1s;
+  }
+
+img:hover {
+    filter: sepia(0%);
+    
+  }
+
+body{
+    background-color:#ebebe3 ;
+}
+
+.bodybgcolor{
+    background-color:#ebebe3  ;
+}
+
+.top-marquee{
+    background-color: #5e3323;
+    color: aliceblue;
+    font-family: 'Inter', sans-serif;
+  
+}
+
+/*bla bla*/
+
+.nav-bar-color {
+    background-color: #8e6f5b;
+}
+
+.nav-logo {
+    color: f6fafb;
+    font-family: 'Inter', cursive;
+
+}
+
+.nav-link {
+    color: #f6fafb !important;
+    font-family: 'Inter', sans-serif;
+    font-size: 17px;
+    font-weight: 900;
+    text-transform: uppercase;
+    transition: all 0.3s ease 0s;
+}
+
+.nav-link:hover {
+    background-color: #5e3323 !important;
+    transition: all 0.3s ease 0s;
+    border-radius: 10px;
+}
+
+.login {
+    text-transform: capitalize !important;
+}
+
+a {
+    text-decoration: none !important;
+}
+
+.login:hover {
+    background-color: #0069d9 !important;
+    text-decoration: none !important;
+    transition: all 0.3s ease 0s;
+}
+
+.changecolour{
+    background-color: #343434;
+}
+.inter{
+    font-family: 'Inter', sans-serif;
+    color: aliceblue;
+}
+.bebas-neue{
+    font-family: 'Bebas Neue', cursive;
+    font-size: 100px;
+    font-weight: 1000;
+    font-style: bold;
+}
+
+.bebas-neue-sub{
+    font-family: 'Bebas Neue', cursive;
+    font-size: 30px;
+    font-weight: 1000;
+    font-style: bold;
+}
+
+/* Home Page */
+
+
+.card-mid{
+    border-radius: 25px;
+    
+}
+
+.card-mid .row{
+    align-items: center;
+}
+
+.centertopcardtext{
+    position:relative;
+    top:50%;
+    transform: translate(0,-50%);
+}
+
+.centertopcardsubtext{
+    position:absolute;
+    top: 70%;
+    transform: translate(0,0%);
+}
+body {
+    margin: 0;
+    padding: 0;
+}
+.background-image {
+    background-image: url(' https://images.pexels.com/photos/16911531/pexels-photo-16911531/free-photo-of-colorful-painting-on-wall.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2');
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-position: center;
+    width: 100%;
+    margin: auto;
+    min-height: 60vh;
+    position: relative;
+}
+.background-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+/*.content {
+    position: relative;
+    top: 30%;
+    background-color:  #ebebe3 ;
+    padding: 40px;
+    padding-left: 110px;
+    padding-right: 110px;
+    text-align: center;
+}*/
+.content h1{
+    text-align: center;
+}
+
+.content h3{
+    text-align: center;
+}
+
+
+.para {
+    padding-right: 3em;
+    padding-left: 3em;
+    line-height: 1.8;
+    text-align: justify;
+}
+.content h2 {
+    text-align: center;
+    margin-top: 30px;
+}
+ 
+.container {
+    margin-top: 20px;
+  } 
+  
+  .image-grid {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .image-container {
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 20px;
+    height: 300px; /* Adjust the height as per your requirements */
+  }
+  
+
+  .image-container img {
+    width: 100%;
+    height:  100%;
+    transition: transform 0.3s ease;
+    object-fit: cover; /* Preserve aspect ratio and fill the container */
+  }
+  
+  .image-container:hover img {
+    transform: scale(1.2);
+  }
+  
+  

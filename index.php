@@ -45,11 +45,11 @@ $reviews->fetch_all();
 
 </head>
 
-<body style="overflow-x: hidden;">
+<body>
   <marquee class="top-marquee" scrollamount="4">* Complimentary Gallery Exhibition happening on Tuesdays every other
     week *</marquee>
 
-  <nav class="navbar navbar-expand-lg navbar-dark  nav-bar-color" style="margin-top: -6px;">
+  <nav class="navbar navbar-expand-lg navbar-dark nav-bar-color" style="margin-top: -6px;">
     <a class="navbar-brand" href="index.php" style="padding: 0%; margin: 0%;">
       <img class="logo-main" style="width:150px; height:auto;" src="assets/Logo/gallery-of-galleries-logo-zip-file/png/logo-white-removebg small.png">
     </a>
@@ -58,27 +58,29 @@ $reviews->fetch_all();
     </button>
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav ml-auto">
+      <ul class="navbar-nav ml-auto" style="gap: .5rem;">
 
         <li class="nav-item">
-          <a class="nav-link" href="Exhibition.php">Exhibitions &nbsp;&nbsp;</a>
+          <a class="nav-link" href="Exhibition.php">Exhibitions</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="Artists.html">Top Artists&nbsp;&nbsp;</a>
+          <a class="nav-link" href="Artists.html">Top Artists</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="GalleryMap.html">Gallery Map&nbsp;&nbsp;</a>
+          <a class="nav-link" href="GalleryMap.html">Gallery Map</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="HistoryOfArt.html">History of Art&nbsp;&nbsp;</a>
+          <a class="nav-link" href="HistoryOfArt.html">History of Art</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="AI Art.html">Art Display Gallery&nbsp;&nbsp;</a>
+          <a class="nav-link" href="AI Art.html">Art Display Gallery</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="aboutus.html">About&nbsp;&nbsp;</a>
+          <a class="nav-link" href="aboutus.html">About</a>
         </li>
-
+        <li class="nav-item"> 
+          <a href="login.php"><button name="login" class="login btn btn-primary nav-link">Login</button></a>
+        </li>
       </ul>
     </div>
   </nav>
@@ -324,7 +326,7 @@ $reviews->fetch_all();
               <a href="Login.php" class="text-reset">Login to system</a>
             </p>
             <p>
-              <a href="Dasboard.php" class="text-reset">Dashboard</a>
+              <a href="Dashboard.php" class="text-reset">Dashboard</a>
             </p>
             <p>
               <a href="#!" class="text-reset"></a>
@@ -345,8 +347,8 @@ $reviews->fetch_all();
               <i class="fas fa-envelope me-3 text-secondary"></i>
               galleryofgalleries@artists.com
             </p>
-            <p><i class="fas fa-phone me-3 text-secondary"></i> + 94 7434 57 88</p>
-            <p><i class="fas fa-print me-3 text-secondary"></i> + 94 7424 56 89</p>
+            <p>+ 94 713456484</p>
+            <p>+94 703412996</p>
           </div>
           <!-- Grid column -->
         </div>
