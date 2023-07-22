@@ -50,7 +50,7 @@ $reviews->fetch_all();
     week *</marquee>
 
   <nav class="navbar navbar-expand-lg navbar-dark  nav-bar-color" style="margin-top: -6px;">
-    <a class="navbar-brand" href="index.html" style="padding: 0%; margin: 0%;">
+    <a class="navbar-brand" href="index.php" style="padding: 0%; margin: 0%;">
       <img class="logo-main" style="width:150px; height:auto;" src="assets/Logo/gallery-of-galleries-logo-zip-file/png/logo-white-removebg small.png">
     </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -61,19 +61,19 @@ $reviews->fetch_all();
       <ul class="navbar-nav ml-auto">
 
         <li class="nav-item">
-          <a class="nav-link" href="#">Exhibitions &nbsp;&nbsp;</a>
+          <a class="nav-link" href="Exhibition.php">Exhibitions &nbsp;&nbsp;</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Top Artists&nbsp;&nbsp;</a>
+          <a class="nav-link" href="Artists.html">Top Artists&nbsp;&nbsp;</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="GalleryMap.html">Gallery Map&nbsp;&nbsp;</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">History of Art&nbsp;&nbsp;</a>
+          <a class="nav-link" href="HistoryOfArt.html">History of Art&nbsp;&nbsp;</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Art Display Gallery&nbsp;&nbsp;</a>
+          <a class="nav-link" href="AI Art.html">Art Display Gallery&nbsp;&nbsp;</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="aboutus.html">About&nbsp;&nbsp;</a>
@@ -296,19 +296,19 @@ $reviews->fetch_all();
               Pages
             </h6>
             <p>
-              <a href="#!" class="text-reset">Exhibitions</a>
+              <a href="Exhibitions.php" class="text-reset">Exhibitions</a>
             </p>
             <p>
-              <a href="#!" class="text-reset">Top Artists</a>
+              <a href="Artists.html" class="text-reset">Top Artists</a>
             </p>
             <p>
               <a href="GalleryMap.html" class="text-reset">Gallery Map</a>
             </p>
             <p>
-              <a href="#!" class="text-reset">History of Art</a>
+              <a href="HistoryOfArt.html" class="text-reset">History of Art</a>
             </p>
             <p>
-              <a href="#!" class="text-reset">Art Gallery Display</a>
+              <a href="AI Art.html" class="text-reset">Art Gallery Display</a>
             </p>
           </div>
           <!-- Grid column -->
@@ -321,16 +321,16 @@ $reviews->fetch_all();
               Edit Dashboard
             </h6>
             <p>
-              <a href="#!" class="text-reset">Login</a>
+              <a href="Login.php" class="text-reset">Login to system</a>
             </p>
             <p>
-              <a href="#!" class="text-reset">Settings</a>
+              <a href="Dasboard.php" class="text-reset">Dashboard</a>
             </p>
             <p>
-              <a href="#!" class="text-reset">Orders</a>
+              <a href="#!" class="text-reset"></a>
             </p>
             <p>
-              <a href="#!" class="text-reset">Help</a>
+              <a href="#!" class="text-reset"></a>
             </p>
           </div>
           <!-- Grid column -->
@@ -340,13 +340,13 @@ $reviews->fetch_all();
             <!-- Links -->
             <br>
             <h6 class="text-uppercase fw-bold mb-4">Contact</h6>
-            <p><i class="fas fa-home me-3 text-secondary"></i> New York, NY 10012, US</p>
+            <p><i class="fas fa-home me-3 text-secondary"></i> Colombo 07 , Sri Lanka</p>
             <p>
               <i class="fas fa-envelope me-3 text-secondary"></i>
-              info@example.com
+              galleryofgalleries@artists.com
             </p>
-            <p><i class="fas fa-phone me-3 text-secondary"></i> + 01 234 567 88</p>
-            <p><i class="fas fa-print me-3 text-secondary"></i> + 01 234 567 89</p>
+            <p><i class="fas fa-phone me-3 text-secondary"></i> + 94 7434 57 88</p>
+            <p><i class="fas fa-print me-3 text-secondary"></i> + 94 7424 56 89</p>
           </div>
           <!-- Grid column -->
         </div>
