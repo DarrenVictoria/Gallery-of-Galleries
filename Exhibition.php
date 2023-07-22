@@ -75,7 +75,8 @@ $exhibitions->fetch_all();
     <div class="date-time">
 
       <h4 class="category-3">Your current date and time</h4>
-      <span><p id="currentDate"></p> <p id="demo"></p></span>
+       <p class="date-time-text" id="currentDate"></p>
+        <p class="date-time-text" id="demo"></p>
       
 
        <script>
@@ -98,11 +99,6 @@ $exhibitions->fetch_all();
         }
       
       </script>
-
-       
-      
-      
-
     </div>
     </div>
 
@@ -112,8 +108,8 @@ $exhibitions->fetch_all();
               foreach ($exhibitions as $exhibition) {
                 
                 echo "
-                <div class=\"flexbox-item flexbox-item-2\">
-                <div class=\"img\"><img src= \"assets/Images/Gallery 3 - fusion of a robot monster with an alien in the spa.jpg \"  class=\"img-fluid\"></div>
+                <div class=\"flexbox-item \">
+                <div class=\"img\"><img src=\" ". $exhibition['ExhibitionImage'] ."\"  class=\"img-fluid\"></div>
                 <div class=\"text\"><p class=\"p1\" id=\"txt2\">". $exhibition['ExhibitionName'] ."</p>
                   <p>
                     Location: " .$exhibition['ExhibitionLocation'] . "<br>

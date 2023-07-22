@@ -124,7 +124,7 @@ body{
     background-color: #ebebe3;
     width: auto;
     height: auto;
-    padding-top: 30px;
+    padding-top: 10px;
 
     
 }
@@ -233,6 +233,9 @@ h1{
     margin-top: 50px;
 }
 
+p.date-time-text{
+    font-family: 'inter', sans-serif;
+}
 
 
 

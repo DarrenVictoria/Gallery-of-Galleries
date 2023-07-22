@@ -238,7 +238,7 @@ $reviews->fetch_all();
   
   <div class="m-3 ">
     <h3>Reviews</h3>
-    <div style="border:1px solid; border-color:#ff00ff; height:50rem; overflow:scroll;" width="100%">
+    <div style="border:1px solid; border-color:#8e6f5b; border-radius:20px; height:50rem; overflow:scroll;" width="100%">
         <?php
         
         foreach ($reviews as $review) {

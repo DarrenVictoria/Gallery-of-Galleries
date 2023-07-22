@@ -34,7 +34,7 @@
         display: flex;
         width: auto;
         height: auto;
-        max-width: 1300px;
+        
         flex-direction: column;
         margin: 10px;
         border: 1px solid #333;
@@ -234,16 +234,7 @@ h1{
     margin-top: 50px;
 }
 
-.btn-outline-danger{
-    border-radius: 20px;
-    margin: 1rem;
-}
 
-.btn-outline-light{
-    border-radius: 20px;
-    margin: 1rem;
-    margin-right: -0.75rem;
-}
 
 
 /* From Homepage */

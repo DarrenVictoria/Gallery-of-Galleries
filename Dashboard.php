@@ -66,8 +66,10 @@ $exhibitions->fetch_all();
     </div>
   </nav>
 
-  <a href="addExhibition.php" class="btn btn-primary">Add New Exhibition</a>
+  
   <h1 class="category">Edit Exhibitions</h1>
+
+  <a href="addExhibition.php" class="btn btn-primary" style="margin-left:5rem">Add New Exhibition</a>
   
         <?php
               
@@ -93,11 +95,12 @@ $exhibitions->fetch_all();
                                 </p>
                                 <form action=\"editExhibition.php\" method=\"get\">
                                   <input type=\"hidden\" name=\"exhibitionName\" value=\"" . $exhibition['ExhibitionName'] . "\">
-                                  <input type=\"submit\" class=\"btn btn-outline-primary\" value=\"Edit\">
+                                  <input type=\"submit\" class=\"btn btn-light\" value=\"Edit info\">
                                 </form>
+                                <br>
                                 <form action=\"deleteExhibition.php\" method=\"post\">
                                   <input type=\"hidden\" name=\"exhibitionName\" value=\"" . $exhibition['ExhibitionName'] . "\">
-                                  <input type=\"submit\" class=\"btn btn-outline-danger\" value=\"Delete\">
+                                  <input type=\"submit\" class=\"btn btn-danger\" value=\"Delete\">
                                 </form>
                               </div>
                             </div>
