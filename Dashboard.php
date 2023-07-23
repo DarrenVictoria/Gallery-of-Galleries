@@ -2,7 +2,9 @@
 session_start();
 if (!isset($_SESSION['adminLoginID']))
 {
-  header("location: login.php");
+  header("Location: login.php");
+  echo "Access Forbidden";
+  exit();
 }
 $server = "localhost";
 $username = "root";
