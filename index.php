@@ -45,7 +45,7 @@ $reviews->fetch_all();
 
 </head>
 
-<body>
+<body style="overflow-x: hidden;">
   <marquee class="top-marquee" scrollamount="4">* Complimentary Gallery Exhibition happening on Tuesdays every other
     week *</marquee>
 
@@ -91,7 +91,7 @@ $reviews->fetch_all();
     <img class="card-img" src="assets/Background/Hero background 2.png" alt="Card image" height="600vh">
     <div class="card-img-overlay">
       <h1 class="card-title centertopcardtext bebas-neue">Gallery of Galleries</h1>
-      <p class="card-text centertopcardsubtext inter" id="herosubtext">Discover and connect with top art spaces in Sri
+      <p style="margin-top:3rem;  margin-bottom:1rem;" class="card-text centertopcardsubtext inter" id="herosubtext">Discover and connect with top art spaces in Sri
         Lanka. Explore diverse genres, mediums, and styles.<br> Your gateway to an immersive art experience. Engage with
         the vibrant art community.</p>
 
@@ -112,7 +112,7 @@ $reviews->fetch_all();
               diverse collection of masterpieces, from paintings to sculptures, each telling a unique story. Immerse
               yourself in the artist's vision through interactive elements and informative descriptions. Click now to
               embark on an awe-inspiring artistic journey.</p>
-            <button type="button" class="btn btn-outline-light btn-lg align-self-md-end ">Exhibitions Calendar</button>
+            <a href="Exhibition.php"><button type="button" class="btn btn-outline-light btn-lg align-self-md-end ">Exhibitions Calendar</button></a>
           </div>
         </div>
       </div>
@@ -132,7 +132,7 @@ $reviews->fetch_all();
             <p class="card-text text-md-right">Explore our virtual artists hub and discover a world of creativity. From painters to photographers, our platform
               showcases diverse talents. Connect with captivating artists and be inspired by their works. Click now to dive
               into the vibrant community and embark on an unforgettable artistic journey.</p>
-            <button type="button" class="btn btn-outline-light btn-lg align-self-md-end">View top artists</button>
+            <a class="align-self-md-end" href="Artists.html"><button type="button" class="btn btn-outline-light btn-lg align-self-md-end">View top artists</button><a href="Artists.html">
           </div>
         </div>
       </div>
@@ -146,7 +146,7 @@ $reviews->fetch_all();
         interactive gallery map. Discover captivating galleries across the country, showcasing rich cultural heritage
         and contemporary artistry. Click below to explore the map and embark on an art expedition through Sri Lanka. Let
         the exploration begin!</p>
-      <button type="button" class="btn btn-outline-dark btn-lg">Visit to explore Galleries</button><br><br>
+        <a href="GalleryMap.html"><button type="button" class="btn btn-outline-dark btn-lg">Visit to explore Galleries</button></a><br><br>
     </div>
 
     <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1-gRo0y-uDqMhGYnRDUVMDE2YPcFQi_w&ehbc=2E312F" width="100%" height="550" style="border-radius: 25px; border-width: 0px;"></iframe>
@@ -214,7 +214,7 @@ $reviews->fetch_all();
           captivating displays. Discover a diverse collection of artworks, from classic to contemporary, thoughtfully
           showcased in immersive exhibitions. Click below to embark on a visual journey, where creativity knows no
           bounds. Let the art transport you to new dimensions of imagination.</p>
-        <button type="button" class="btn btn-outline-dark btn-lg">Visit Art Gallery</button><br><br>
+          <a href="AI Art.html"><button type="button" class="btn btn-outline-dark btn-lg">Visit Art Gallery</button></a><br><br>
       </div>
     </div>
 
