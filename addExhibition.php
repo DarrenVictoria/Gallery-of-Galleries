@@ -4,11 +4,8 @@ if (!isset($_SESSION['adminLoginID']))
 {
   header("location: login.php");
 }
-$server = "localhost";
-$username = "root";
-$password = "";
-$db = "gallery";
-$conn = new mysqli($server, $username, $password, $db);
+
+require("connection.php");
 
 if ($_SERVER['REQUEST_METHOD'] == "POST") {
 
@@ -26,17 +23,17 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
 
     $sql = "INSERT INTO exhibitions(ExhibitionName,ExhibitionImage,ExhibitionLocation,ExhibitionGallery,ExhibitionStartDate,ExhibitionEndDate,ExhibitionTime) VALUES ('$name','imageshiddenupload/$upname','$location','$gallery','$sDate','$eDate','$time')";
 
-    $result = $conn->query($sql);
+    $result = $connection->query($sql);
 
-    if ($conn->error) {
-        echo "Something went wrong! <br> Error: <br> " . $conn->error;
+    if ($connection->error) {
+        echo "Something went wrong! <br> Error: <br> " . $connection->error;
         exit();
     } else {
         echo "Exhibition has been added.<br><a href=\"Dashboard.php\">Go Back</a>";
         exit();
     }
 
-    $conn->close();
+    $connection->close();
     
 }
 
