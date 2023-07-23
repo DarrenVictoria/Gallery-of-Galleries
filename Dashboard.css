@@ -112,12 +112,6 @@ body{
  background-color: #ebebe3;
   }
   
-
-.expiered{
-    filter: grayscale(100%);
-}
-
-
 .flexbox-container{
     display: flex;
     flex-direction: column;

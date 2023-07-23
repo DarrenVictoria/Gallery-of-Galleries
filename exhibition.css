@@ -113,6 +113,10 @@ body{
   
 
 
+.expiered{
+    filter: grayscale(100%);
+}
+
 
 
 .flexbox-container{
