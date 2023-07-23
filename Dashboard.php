@@ -1,6 +1,7 @@
 <?php
-session_start();
 
+require 'connection.php';
+session_start();
 if (!isset($_SESSION['adminLoginID']))
 {
   header("Location: login.php");
@@ -8,7 +9,7 @@ if (!isset($_SESSION['adminLoginID']))
   exit();
 }
 
-$sql = "SELECT * FROM exhibitions ORDER BY ExhibitionStartDate DESC";
+$sql = "SELECT * FROM exhibitions ORDER BY ExhibitionStartDate DESC";   
 
 $exhibitions = $connection->query($sql);
 
@@ -35,11 +36,9 @@ $exhibitions->fetch_all();
 
   <nav class="navbar navbar-expand-lg navbar-dark nav-bar-color" style="margin-top: -6px;">
     <a class="navbar-brand" href="index.php" style="padding: 0%; margin: 0%;">
-      <img class="logo-main" style="width:150px; height:auto;"
-        src="assets/Logo/gallery-of-galleries-logo-zip-file/png/logo-white-removebg small.png">
+      <img class="logo-main" style="width:150px; height:auto;" src="assets/Logo/gallery-of-galleries-logo-zip-file/png/logo-white-removebg small.png">
     </a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
 
@@ -64,36 +63,36 @@ $exhibitions->fetch_all();
         <li class="nav-item">
           <a class="nav-link" href="aboutus.html">About</a>
         </li>
-        <li class="nav-item">
+        <li class="nav-item"> 
           <a href="login.php"><button name="login" class="login btn btn-primary nav-link">Login</button></a>
         </li>
       </ul>
     </div>
   </nav>
 
-
+  
   <h1 class="category">Edit Exhibitions</h1>
 
   <a href="addExhibition.php" class="btn btn-primary" style="margin-left:5rem">Add New Exhibition</a>
-
-  <?php
-
-  foreach ($exhibitions as $exhibition) {
-
-    echo "
+  
+        <?php
+              
+              foreach ($exhibitions as $exhibition) {
+                
+                echo "
                     <div style=\"padding: 2%;\">
                         <div class=\"card-mid mb-3 changecolour inter\">
                           <div class=\"row d-flex \">
                             <div class=\" card-image col-md-4\">
-                              <img src=\"" . $exhibition['ExhibitionImage'] . "\" class=\"img-fluid rounded-start\" alt=\"Exhibition\" style=\"padding: 4%;  border-radius: 25px; \" />
+                              <img src=\"". $exhibition['ExhibitionImage'] ."\" class=\"img-fluid rounded-start\" alt=\"Exhibition\" style=\"padding: 4%;  border-radius: 25px; \" />
                             </div>
                             <div class=\"col-md-8\">
                               <div class=\"card-body\">
-                                <h5 class=\"card-title bebas-neue-sub\">" . $exhibition['ExhibitionName'] . "</h5>
+                                <h5 class=\"card-title bebas-neue-sub\">". $exhibition['ExhibitionName'] ."</h5>
                                 <p class=\"card-text\">
-                                    Location: " . $exhibition['ExhibitionLocation'] . "<br>
+                                    Location: " .$exhibition['ExhibitionLocation'] . "<br>
                                     Gallery :" . $exhibition['ExhibitionGallery'] . "<br>
-                                    Start date : " . $exhibition['ExhibitionStartDate'] . "<br>
+                                    Start date : ". $exhibition['ExhibitionStartDate'] . "<br>
                                     End date : " . $exhibition['ExhibitionEndDate'] . "<br>
                                     Time: " . $exhibition['ExhibitionTime'] . "<br>
                                                    
@@ -114,22 +113,22 @@ $exhibitions->fetch_all();
                       </div>
                
                 ";
-
-  }
-
-
-
-  ?>
-
-
+              
+              }
+              
+            
+              
+              ?>
 
 
+  
+ 
 
-
-
-
-
-
+   
+    
+ 
+  
+ 
 
   <!-- Footer -->
   <footer class="text-center text-lg-start bg-dark text-muted">
@@ -229,18 +228,19 @@ $exhibitions->fetch_all();
   </footer>
   <!-- Footer -->
 
-  <?php
-  if (isset($_POST['logout'])) {
-    session_destroy();
-    header("location: login.php");
-    exit;
-  }
-  ?>
+   <?php
+    if(isset($_POST['logout']))
+    {
+      session_destroy();
+      header("location: login.php");
+      exit;
+    }
+    ?>
 
 
 
 
-
+  
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
     integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
     crossorigin="anonymous"></script>
