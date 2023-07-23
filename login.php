@@ -1,5 +1,6 @@
 <?php
   require("connection.php");
+  session_start();
 ?>
 
 <!DOCTYPE html>
@@ -41,9 +42,8 @@
       $result = mysqli_query($connection, $query);
       if (mysqli_num_rows($result) == 1)
       {
-        session_start();
         $_SESSION['adminLoginID'] = $_POST['uname'];
-        header("location: dashboard.php");
+        header("location: Dashboard.php");
         exit;
       }
       else
