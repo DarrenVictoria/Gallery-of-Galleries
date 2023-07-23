@@ -42,22 +42,43 @@ body{
 
 /*bla bla*/
 
-.nav-bar-color{
-    background-color: #8e6f5b ;
+.nav-bar-color {
+	background-color: #8e6f5b;
 }
-.nav-logo{
-    color: f6fafb;
-    font-family: 'Inter', cursive;
+
+.nav-logo {
+	color: f6fafb;
+	font-family: 'Inter', cursive;
 
 }
+
 .nav-link {
-    color: #f6fafb   !important;
-    font-family:'Inter', sans-serif;
-    font-size: 17px;
-    font-weight: 900;
-    padding: 0 10px;
-    text-transform: uppercase;
-    transition: all 0.3s ease 0s;
+	color: #f6fafb !important;
+	font-family: 'Inter', sans-serif;
+	font-size: 17px;
+	font-weight: 900;
+	text-transform: uppercase;
+	transition: all 0.3s ease 0s;
+}
+
+.nav-link:hover {
+	background-color: #5e3323 !important;
+	transition: all 0.3s ease 0s;
+	border-radius: 10px;
+}
+
+.login {
+	text-transform: capitalize !important;
+}
+
+a {
+	text-decoration: none !important;
+}
+
+.login:hover {
+	background-color: #0069d9 !important;
+	text-decoration: none !important;
+	transition: all 0.3s ease 0s;
 }
 
 .changecolour{

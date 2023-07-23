@@ -19,7 +19,8 @@ $exhibitions->fetch_all();
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-  <title>Template</title>
+  <link rel="icon" type="image/x-icon" href="/assets/Logo/gallery-of-galleries-logo-zip-file/png/logo-no-background.ico">
+  <title>Exhibitions</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css"
     integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
   <link rel="stylesheet" href="exhibition.css">
@@ -31,37 +32,38 @@ $exhibitions->fetch_all();
   <marquee class="top-marquee" scrollamount="4">* Complimentary Gallery Exhibition happening on Tuesdays every other
     week *</marquee>
 
-  <nav class="navbar navbar-expand-lg navbar-dark  nav-bar-color" style="margin-top: -6px;">
-    <a class="navbar-brand" href="index.html">
-      <p class="nav-logo" style="margin-top: 5%;">Gallery of Galleries</p>
+  <nav class="navbar navbar-expand-lg navbar-dark nav-bar-color" style="margin-top: -6px;">
+    <a class="navbar-brand" href="index.php" style="padding: 0%; margin: 0%;">
+      <img class="logo-main" style="width:150px; height:auto;" src="assets/Logo/gallery-of-galleries-logo-zip-file/png/logo-white-removebg small.png">
     </a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav ml-auto">
+      <ul class="navbar-nav ml-auto" style="gap: .5rem;">
 
         <li class="nav-item">
-          <a class="nav-link" href="#">Exhibitions &nbsp;&nbsp;</a>
+          <a class="nav-link" href="Exhibition.php">Exhibitions</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Top Artists&nbsp;&nbsp;</a>
+          <a class="nav-link" href="Artists.html">Top Artists</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Gallery Map&nbsp;&nbsp;</a>
+          <a class="nav-link" href="GalleryMap.html">Gallery Map</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">History of Art&nbsp;&nbsp;</a>
+          <a class="nav-link" href="HistoryOfArt.html">History of Art</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Art Display Gallery&nbsp;&nbsp;</a>
+          <a class="nav-link" href="AI Art.html">Art Display Gallery</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">About&nbsp;&nbsp;</a>
+          <a class="nav-link" href="aboutus.html">About</a>
         </li>
-
+        <li class="nav-item"> 
+          <a href="login.php"><button name="login" class="login btn btn-primary nav-link">Login</button></a>
+        </li>
       </ul>
     </div>
   </nav>
@@ -75,7 +77,8 @@ $exhibitions->fetch_all();
     <div class="date-time">
 
       <h4 class="category-3">Your current date and time</h4>
-      <span><p id="currentDate"></p> <p id="demo"></p></span>
+       <p class="date-time-text" id="currentDate"></p>
+        <p class="date-time-text" id="demo"></p>
       
 
        <script>
@@ -98,11 +101,6 @@ $exhibitions->fetch_all();
         }
       
       </script>
-
-       
-      
-      
-
     </div>
     </div>
 
@@ -112,8 +110,8 @@ $exhibitions->fetch_all();
               foreach ($exhibitions as $exhibition) {
                 
                 echo "
-                <div class=\"flexbox-item flexbox-item-2\">
-                <div class=\"img\"><img src= \"assets/Images/Gallery 3 - fusion of a robot monster with an alien in the spa.jpg \"  class=\"img-fluid\"></div>
+                <div class=\"flexbox-item \">
+                <div class=\"img\"><img src=\" ". $exhibition['ExhibitionImage'] ."\"  class=\"img-fluid\"></div>
                 <div class=\"text\"><p class=\"p1\" id=\"txt2\">". $exhibition['ExhibitionName'] ."</p>
                   <p>
                     Location: " .$exhibition['ExhibitionLocation'] . "<br>
@@ -139,12 +137,8 @@ $exhibitions->fetch_all();
 
   <!-- Footer -->
   <footer class="text-center text-lg-start bg-dark text-muted">
-
-
-
-
     <!-- Section: Links  -->
-    <section class="page-footer">
+    <section class="page-footer" style="padding:10px">
       <div class="container text-center text-md-start mt-5" style=>
         <!-- Grid row -->
         <div class="row mt-3">
@@ -171,19 +165,19 @@ $exhibitions->fetch_all();
               Pages
             </h6>
             <p>
-              <a href="#!" class="text-reset">Exhibitions</a>
+              <a href="Exhibitions.php" class="text-reset">Exhibitions</a>
             </p>
             <p>
-              <a href="#!" class="text-reset">Top Artists</a>
+              <a href="Artists.html" class="text-reset">Top Artists</a>
             </p>
             <p>
-              <a href="#!" class="text-reset">Gallery Map</a>
+              <a href="GalleryMap.html" class="text-reset">Gallery Map</a>
             </p>
             <p>
-              <a href="#!" class="text-reset">History of Art</a>
+              <a href="HistoryOfArt.html" class="text-reset">History of Art</a>
             </p>
             <p>
-              <a href="#!" class="text-reset">Art Gallery Display</a>
+              <a href="AI Art.html" class="text-reset">Art Gallery Display</a>
             </p>
           </div>
           <!-- Grid column -->
@@ -196,16 +190,16 @@ $exhibitions->fetch_all();
               Edit Dashboard
             </h6>
             <p>
-              <a href="#!" class="text-reset">Login</a>
+              <a href="Login.php" class="text-reset">Login to system</a>
             </p>
             <p>
-              <a href="#!" class="text-reset">Settings</a>
+              <a href="Dashboard.php" class="text-reset">Dashboard</a>
             </p>
             <p>
-              <a href="#!" class="text-reset">Orders</a>
+              <a href="#!" class="text-reset"></a>
             </p>
             <p>
-              <a href="#!" class="text-reset">Help</a>
+              <a href="#!" class="text-reset"></a>
             </p>
           </div>
           <!-- Grid column -->
@@ -215,13 +209,13 @@ $exhibitions->fetch_all();
             <!-- Links -->
             <br>
             <h6 class="text-uppercase fw-bold mb-4">Contact</h6>
-            <p><i class="fas fa-home me-3 text-secondary"></i> New York, NY 10012, US</p>
+            <p><i class="fas fa-home me-3 text-secondary"></i> Colombo 07 , Sri Lanka</p>
             <p>
               <i class="fas fa-envelope me-3 text-secondary"></i>
-              info@example.com
+              galleryofgalleries@artists.com
             </p>
-            <p><i class="fas fa-phone me-3 text-secondary"></i> + 01 234 567 88</p>
-            <p><i class="fas fa-print me-3 text-secondary"></i> + 01 234 567 89</p>
+            <p>+ 94 713456484</p>
+            <p>+94 703412996</p>
           </div>
           <!-- Grid column -->
         </div>

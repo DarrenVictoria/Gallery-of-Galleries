@@ -1,4 +1,9 @@
 <?php
+session_start();
+if (!isset($_SESSION['adminLoginID']))
+{
+  header("location: login.php");
+}
 $server = "localhost";
 $username = "root";
 $password = "";
@@ -7,15 +12,19 @@ $conn = new mysqli($server, $username, $password, $db);
 
 if ($_SERVER['REQUEST_METHOD'] == "POST") {
 
+    $upname = $_FILES['image']['name'];
+    $tmppath = $_FILES['image']['tmp_name'];
+    $moved=move_uploaded_file($tmppath,"imageshiddenupload/".$upname);
+
     $name = $_POST['name'];
-    $image = $_POST['image'];
+    
     $location = $_POST['location'];
     $gallery = $_POST['gallery'];
     $sDate = $_POST['sDate'];
     $eDate = $_POST['eDate'];
     $time = $_POST['time'];
 
-    $sql = "INSERT INTO exhibitions(ExhibitionName,ExhibitionImage,ExhibitionLocation,ExhibitionGallery,ExhibitionStartDate,ExhibitionEndDate,ExhibitionTime) VALUES ('$name','$image','$location','$gallery','$sDate','$eDate','$time')";
+    $sql = "INSERT INTO exhibitions(ExhibitionName,ExhibitionImage,ExhibitionLocation,ExhibitionGallery,ExhibitionStartDate,ExhibitionEndDate,ExhibitionTime) VALUES ('$name','imageshiddenupload/$upname','$location','$gallery','$sDate','$eDate','$time')";
 
     $result = $conn->query($sql);
 
@@ -40,20 +49,20 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    <title>Document</title>
+    <title>Add Exhibition</title>
 </head>
 
-<body>
+<body> 
 
-    <form action="addExhibition.php" method="post" class="m-5">
+    <form action="addExhibition.php" method="post" class="m-5" enctype="multipart/form-data">
         <h3>Add new exhibition</h3>
         <div class="form-group">
             <label for="formGroupExampleInput">Name</label>
             <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Name" name="name">
         </div>
         <div class="form-group">
-            <label for="formGroupExampleInput2">Image</label>
-            <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Image" name="image">
+            <label class="form-label" for="customFile">Enter Exhibition image</label>
+            <input style="padding:2rem; " type="file" class="form-control" id="customFile" name="image" />
         </div>
         <div class="form-group">
             <label for="formGroupExampleInput2">Location</label>
@@ -75,6 +84,8 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
             <label for="formGroupExampleInput2">Time</label>
             <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Time" name="time">
         </div>
+        
+
         <div class="form-group">
             <input type="submit" class="btn btn-primary" cvalue="Save">
         </div>

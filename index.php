@@ -45,12 +45,12 @@ $reviews->fetch_all();
 
 </head>
 
-<body>
+<body style="overflow-x: hidden;">
   <marquee class="top-marquee" scrollamount="4">* Complimentary Gallery Exhibition happening on Tuesdays every other
     week *</marquee>
 
-  <nav class="navbar navbar-expand-lg navbar-dark  nav-bar-color" style="margin-top: -6px;">
-    <a class="navbar-brand" href="index.html" style="padding: 0%; margin: 0%;">
+  <nav class="navbar navbar-expand-lg navbar-dark nav-bar-color" style="margin-top: -6px;">
+    <a class="navbar-brand" href="index.php" style="padding: 0%; margin: 0%;">
       <img class="logo-main" style="width:150px; height:auto;" src="assets/Logo/gallery-of-galleries-logo-zip-file/png/logo-white-removebg small.png">
     </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -58,27 +58,29 @@ $reviews->fetch_all();
     </button>
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav ml-auto">
+      <ul class="navbar-nav ml-auto" style="gap: .5rem;">
 
         <li class="nav-item">
-          <a class="nav-link" href="#">Exhibitions &nbsp;&nbsp;</a>
+          <a class="nav-link" href="Exhibition.php">Exhibitions</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Top Artists&nbsp;&nbsp;</a>
+          <a class="nav-link" href="Artists.html">Top Artists</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="GalleryMap.html">Gallery Map&nbsp;&nbsp;</a>
+          <a class="nav-link" href="GalleryMap.html">Gallery Map</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">History of Art&nbsp;&nbsp;</a>
+          <a class="nav-link" href="HistoryOfArt.html">History of Art</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Art Display Gallery&nbsp;&nbsp;</a>
+          <a class="nav-link" href="AI Art.html">Art Display Gallery</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="aboutus.html">About&nbsp;&nbsp;</a>
+          <a class="nav-link" href="aboutus.html">About</a>
         </li>
-
+        <li class="nav-item"> 
+          <a href="login.php"><button name="login" class="login btn btn-primary nav-link">Login</button></a>
+        </li>
       </ul>
     </div>
   </nav>
@@ -89,7 +91,7 @@ $reviews->fetch_all();
     <img class="card-img" src="assets/Background/Hero background 2.png" alt="Card image" height="600vh">
     <div class="card-img-overlay">
       <h1 class="card-title centertopcardtext bebas-neue">Gallery of Galleries</h1>
-      <p class="card-text centertopcardsubtext inter" id="herosubtext">Discover and connect with top art spaces in Sri
+      <p style="margin-top:3rem;  margin-bottom:1rem;" class="card-text centertopcardsubtext inter" id="herosubtext">Discover and connect with top art spaces in Sri
         Lanka. Explore diverse genres, mediums, and styles.<br> Your gateway to an immersive art experience. Engage with
         the vibrant art community.</p>
 
@@ -110,7 +112,7 @@ $reviews->fetch_all();
               diverse collection of masterpieces, from paintings to sculptures, each telling a unique story. Immerse
               yourself in the artist's vision through interactive elements and informative descriptions. Click now to
               embark on an awe-inspiring artistic journey.</p>
-            <button type="button" class="btn btn-outline-light btn-lg align-self-md-end ">Exhibitions Calendar</button>
+            <a href="Exhibition.php"><button type="button" class="btn btn-outline-light btn-lg align-self-md-end ">Exhibitions Calendar</button></a>
           </div>
         </div>
       </div>
@@ -130,7 +132,7 @@ $reviews->fetch_all();
             <p class="card-text text-md-right">Explore our virtual artists hub and discover a world of creativity. From painters to photographers, our platform
               showcases diverse talents. Connect with captivating artists and be inspired by their works. Click now to dive
               into the vibrant community and embark on an unforgettable artistic journey.</p>
-            <button type="button" class="btn btn-outline-light btn-lg align-self-md-end">View top artists</button>
+            <a class="align-self-md-end" href="Artists.html"><button type="button" class="btn btn-outline-light btn-lg align-self-md-end">View top artists</button><a href="Artists.html">
           </div>
         </div>
       </div>
@@ -144,7 +146,7 @@ $reviews->fetch_all();
         interactive gallery map. Discover captivating galleries across the country, showcasing rich cultural heritage
         and contemporary artistry. Click below to explore the map and embark on an art expedition through Sri Lanka. Let
         the exploration begin!</p>
-      <button type="button" class="btn btn-outline-dark btn-lg">Visit to explore Galleries</button><br><br>
+        <a href="GalleryMap.html"><button type="button" class="btn btn-outline-dark btn-lg">Visit to explore Galleries</button></a><br><br>
     </div>
 
     <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1-gRo0y-uDqMhGYnRDUVMDE2YPcFQi_w&ehbc=2E312F" width="100%" height="550" style="border-radius: 25px; border-width: 0px;"></iframe>
@@ -212,7 +214,7 @@ $reviews->fetch_all();
           captivating displays. Discover a diverse collection of artworks, from classic to contemporary, thoughtfully
           showcased in immersive exhibitions. Click below to embark on a visual journey, where creativity knows no
           bounds. Let the art transport you to new dimensions of imagination.</p>
-        <button type="button" class="btn btn-outline-dark btn-lg">Visit Art Gallery</button><br><br>
+          <a href="AI Art.html"><button type="button" class="btn btn-outline-dark btn-lg">Visit Art Gallery</button></a><br><br>
       </div>
     </div>
 
@@ -238,7 +240,7 @@ $reviews->fetch_all();
   
   <div class="m-3 ">
     <h3>Reviews</h3>
-    <div style="border:1px solid; border-color:#ff00ff; height:50rem; overflow:scroll;" width="100%">
+    <div style="border:1px solid; border-color:#8e6f5b; border-radius:20px; height:50rem; overflow:scroll;" width="100%">
         <?php
         
         foreach ($reviews as $review) {
@@ -296,19 +298,19 @@ $reviews->fetch_all();
               Pages
             </h6>
             <p>
-              <a href="#!" class="text-reset">Exhibitions</a>
+              <a href="Exhibitions.php" class="text-reset">Exhibitions</a>
             </p>
             <p>
-              <a href="#!" class="text-reset">Top Artists</a>
+              <a href="Artists.html" class="text-reset">Top Artists</a>
             </p>
             <p>
               <a href="GalleryMap.html" class="text-reset">Gallery Map</a>
             </p>
             <p>
-              <a href="#!" class="text-reset">History of Art</a>
+              <a href="HistoryOfArt.html" class="text-reset">History of Art</a>
             </p>
             <p>
-              <a href="#!" class="text-reset">Art Gallery Display</a>
+              <a href="AI Art.html" class="text-reset">Art Gallery Display</a>
             </p>
           </div>
           <!-- Grid column -->
@@ -321,16 +323,16 @@ $reviews->fetch_all();
               Edit Dashboard
             </h6>
             <p>
-              <a href="#!" class="text-reset">Login</a>
+              <a href="Login.php" class="text-reset">Login to system</a>
             </p>
             <p>
-              <a href="#!" class="text-reset">Settings</a>
+              <a href="Dashboard.php" class="text-reset">Dashboard</a>
             </p>
             <p>
-              <a href="#!" class="text-reset">Orders</a>
+              <a href="#!" class="text-reset"></a>
             </p>
             <p>
-              <a href="#!" class="text-reset">Help</a>
+              <a href="#!" class="text-reset"></a>
             </p>
           </div>
           <!-- Grid column -->
@@ -340,13 +342,13 @@ $reviews->fetch_all();
             <!-- Links -->
             <br>
             <h6 class="text-uppercase fw-bold mb-4">Contact</h6>
-            <p><i class="fas fa-home me-3 text-secondary"></i> New York, NY 10012, US</p>
+            <p><i class="fas fa-home me-3 text-secondary"></i> Colombo 07 , Sri Lanka</p>
             <p>
               <i class="fas fa-envelope me-3 text-secondary"></i>
-              info@example.com
+              galleryofgalleries@artists.com
             </p>
-            <p><i class="fas fa-phone me-3 text-secondary"></i> + 01 234 567 88</p>
-            <p><i class="fas fa-print me-3 text-secondary"></i> + 01 234 567 89</p>
+            <p>+ 94 713456484</p>
+            <p>+94 703412996</p>
           </div>
           <!-- Grid column -->
         </div>
