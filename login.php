@@ -1,6 +1,6 @@
 <?php
-  require("connection.php");
   session_start();
+  require("connection.php");
 ?>
 
 <!DOCTYPE html>
@@ -38,7 +38,7 @@
   <?php
     if (isset($_POST['login']))
     {
-      $query = "SELECT * FROM `usercredentials` WHERE `Username` = '$_POST[uname]' AND `Password` = '$_POST[pwd]'";
+      $query = "SELECT * FROM usercredentials WHERE Username='$_POST[uname]' AND Password='$_POST[pwd]'";
       $result = mysqli_query($connection, $query);
       if (mysqli_num_rows($result) == 1)
       {
