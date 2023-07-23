@@ -43,7 +43,7 @@
       if (mysqli_num_rows($result) == 1)
       {
         $_SESSION['adminLoginID'] = $_POST['uname'];
-        header("location: Dashboard.php");
+        echo "<script>document.location = 'index.php';</script>";
         exit;
       }
       else
