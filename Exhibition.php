@@ -104,10 +104,20 @@ $exhibitions->fetch_all();
     
         <?php
               
+              $today = date("Y-m-d");
+              $today_time = strtotime($today);
               foreach ($exhibitions as $exhibition) {
-                
+
+                $expire_time = strtotime($exhibition['ExhibitionEndDate']);
+
+                if ($expire_time < $today_time) {
+                   $class_list = "flexbox-item expiered";
+                }
+                else{
+                  $class_list = "flexbox-item";
+                }
                 echo "
-                <div class=\"flexbox-item \">
+                <div class=\"" . $class_list ."\">
                 <div class=\"img\"><img src=\" ". $exhibition['ExhibitionImage'] ."\"  class=\"img-fluid\"></div>
                 <div class=\"text\"><p class=\"p1\" id=\"txt2\">". $exhibition['ExhibitionName'] ."</p>
                   <p>
