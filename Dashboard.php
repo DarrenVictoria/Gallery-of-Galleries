@@ -6,15 +6,10 @@ if (!isset($_SESSION['adminLoginID']))
   echo "Access Forbidden";
   exit();
 }
-$server = "localhost";
-$username = "id21049122_galleryofgalleriesadmin";
-$password = "Gallery#of@Galleries%2023";
-$db = "id21049122_adminlogin";
-$conn = new mysqli($server, $username, $password, $db);
 
 $sql = "SELECT * FROM exhibitions ORDER BY ExhibitionStartDate DESC";   
 
-$exhibitions = $conn->query($sql);
+$exhibitions = $connection->query($sql);
 
 $exhibitions->fetch_all();
 ?>
