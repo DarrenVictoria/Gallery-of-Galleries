@@ -1,17 +1,16 @@
 <?php
 session_start();
-if (!isset($_SESSION['adminLoginID'])) {
-  header("location: login.php");
+
+if (!isset($_SESSION['adminLoginID']))
+{
+  header("Location: login.php");
+  echo "Access Forbidden";
+  exit();
 }
-$server = "localhost";
-$username = "root";
-$password = "";
-$db = "gallery";
-$conn = new mysqli($server, $username, $password, $db);
 
 $sql = "SELECT * FROM exhibitions ORDER BY ExhibitionStartDate DESC";
 
-$exhibitions = $conn->query($sql);
+$exhibitions = $connection->query($sql);
 
 $exhibitions->fetch_all();
 ?>

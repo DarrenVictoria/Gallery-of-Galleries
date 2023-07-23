@@ -1,4 +1,5 @@
 <?php
+  session_start();
   require("connection.php");
 ?>
 
@@ -37,13 +38,12 @@
   <?php
     if (isset($_POST['login']))
     {
-      $query = "SELECT * FROM `usercredentials` WHERE `Username` = '$_POST[uname]' AND `Password` = '$_POST[pwd]'";
+      $query = "SELECT * FROM usercredentials WHERE Username='$_POST[uname]' AND Password='$_POST[pwd]'";
       $result = mysqli_query($connection, $query);
       if (mysqli_num_rows($result) == 1)
       {
-        session_start();
         $_SESSION['adminLoginID'] = $_POST['uname'];
-        header("location: dashboard.php");
+        echo "<script>document.location = 'Dashboard.php';</script>";
         exit;
       }
       else

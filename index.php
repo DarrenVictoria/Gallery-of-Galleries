@@ -1,9 +1,6 @@
 <?php
-$server = "localhost";
-$username = "root";
-$password = "";
-$db = "gallery";
-$conn = new mysqli($server, $username, $password, $db);
+
+require("connection.php");
 
 if ($_SERVER['REQUEST_METHOD'] == "POST") {
   $name = $_POST["name"];
@@ -12,22 +9,22 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
 
   $sql = "INSERT INTO userreviews(ReviewerName,GalleryVisited,Review) VALUES ('$name','$gallery','$review')";
 
-  $result = $conn->query($sql);
+  $result = $connection->query($sql);
 
-  if ($conn->error) {
-    echo "Something went wrong! <br> Error: <br> " . $conn->error;
+  if ($connection->error) {
+    echo "Something went wrong! <br> Error: <br> " . $connection->error;
     exit();
   } else {
     echo "Your review has been added to the website.<br><a href=\"index.php\">Go Back</a>";
     exit();
   }
 
-  $conn->close();
+  $connection->close();
 }
 
 $sql = "SELECT * FROM userreviews";
 
-$reviews = $conn->query($sql);
+$reviews = $connection->query($sql);
 $reviews->fetch_all();
 
 ?>

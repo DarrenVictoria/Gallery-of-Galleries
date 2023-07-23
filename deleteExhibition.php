@@ -4,11 +4,8 @@ if (!isset($_SESSION['adminLoginID']))
 {
   header("location: login.php");
 }
-$server = "localhost";
-$username = "root";
-$password = "";
-$db = "gallery";
-$conn = new mysqli($server, $username, $password, $db);
+
+require("connection.php");
 
 if ($_SERVER['REQUEST_METHOD'] == "POST"){
 
@@ -16,7 +13,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST"){
     
     $sql = "DELETE FROM exhibitions WHERE ExhibitionName='$exhibitionName'";   
 
-    $exhibitions = $conn->query($sql);
+    $exhibitions = $connection->query($sql);
 
     header("Location: Dashboard.php");
 }
