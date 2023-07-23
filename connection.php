@@ -1,8 +1,10 @@
 <?php
-    $connection = mysqli_connect("localhost", "root", "", "adminlogin");
+    // $connection = mysqli_connect("localhost", "root", "", "adminlogin");
+    $connection = new mysqli("localhost", "root", "", "adminlogin");
 
-    if (mysqli_connect_error())
-    {
-        echo "Cannot connect";
+    if ($mysqli -> connect_errno) {
+        echo "Failed to connect to MySQL: " . $mysqli -> connect_error;
+        exit();
     }
+
 ?>
