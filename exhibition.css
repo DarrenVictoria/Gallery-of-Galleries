@@ -56,6 +56,13 @@
         position: relative;
         top: -80px;
     }
+    .category{
+        font-size: 22vw;
+    }
+
+    .category-2{
+        font-size: 20vw;
+    }
 
   }
 
@@ -87,7 +94,7 @@
 
     .flexbox-item{
         display: flex;
-        width: auto;
+        width: 600px;
         height: auto;
         max-width: 1300px;
         margin: 15px;
