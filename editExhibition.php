@@ -21,7 +21,8 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
     $eDate = $_POST['eDate'];
     $time = $_POST['time'];
 
-    $sql = "UPDATE exhibitions SET ExhibitionImage='imageshiddenupload/$upname',ExhibitionLocation='$location',ExhibitionGallery='$gallery',ExhibitionStartDate='$sDate',ExhibitionEndDate='$eDate',ExhibitionTime='$time'";
+    $exhibitionName = $_GET['exhibitionName'];
+    $sql = "UPDATE exhibitions SET ExhibitionImage='imageshiddenupload/$upname',ExhibitionLocation='$location',ExhibitionGallery='$gallery',ExhibitionStartDate='$sDate',ExhibitionEndDate='$eDate',ExhibitionTime='$time' WHERE exhibitionName='$exhibitionName'";
 
     $result = $connection->query($sql);
 
@@ -57,7 +58,7 @@ $exhibition = $result->fetch_assoc();
 
 <body>
 
-    <form action="editExhibition.php" method="post" class="m-5" enctype="multipart/form-data">
+    <form action="editExhibition.php?exhibitionName=<?php echo $exhibitionName; ?>" method="post" class="m-5" enctype="multipart/form-data">
         <h3>Edit exhibition</h3>
         <div class="form-group">
             <label for="formGroupExampleInput">Name</label>
