@@ -1,13 +1,10 @@
 <?php
-$server = "localhost";
-$username = "root";
-$password = "";
-$db = "gallery";
-$conn = new mysqli($server, $username, $password, $db);
+
+require("connection.php");
 
 $sql = "SELECT * FROM exhibitions ORDER BY ExhibitionStartDate DESC";   
 
-$exhibitions = $conn->query($sql);
+$exhibitions = $connection->query($sql);
 
 $exhibitions->fetch_all();
 
