@@ -66,6 +66,9 @@ $exhibitions->fetch_all();
         <li class="nav-item"> 
           <a href="login.php"><button name="login" class="login btn btn-primary nav-link">Login</button></a>
         </li>
+        <li class="nav-item"> 
+          <a href="logout.php"><button name="login" class="login btn btn-danger nav-link">Logout</button></a>
+        </li>
       </ul>
     </div>
   </nav>
