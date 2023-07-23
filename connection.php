@@ -8,7 +8,7 @@
 
     $users->fetch_all();
 
-    print_r($exhibitions);
+    print_r($users);
 
     if ($mysqli -> connect_errno) {
         echo "Failed to connect to MySQL: " . $mysqli -> connect_error;
