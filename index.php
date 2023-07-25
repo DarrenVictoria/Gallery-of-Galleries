@@ -3,9 +3,9 @@
 require("connection.php");
 
 if ($_SERVER['REQUEST_METHOD'] == "POST") {
-  $name = $_POST["name"];
-  $gallery = $_POST["gallery_visited"];
-  $review = $_POST["review"];
+  $name = str_replace("'", "", $_POST["name"]);
+  $gallery = str_replace("'", "", $_POST["gallery_visited"]);  
+  $review = str_replace("'", "", $_POST["review"]);
 
   $sql = "INSERT INTO userreviews(ReviewerName,GalleryVisited,Review) VALUES ('$name','$gallery','$review')";
 
@@ -43,6 +43,14 @@ $reviews->fetch_all();
 </head>
 
 <body style="overflow-x: hidden;">
+    <script>
+            document.addEventListener('DOMContentLoaded', () => {
+            var disclaimer =  document.querySelector("img[alt='www.000webhost.com']");
+             if(disclaimer){
+                 disclaimer.remove();
+             }  
+           });
+  </script>
   <marquee class="top-marquee" scrollamount="4">* Complimentary Gallery Exhibition happening on Tuesdays every other
     week *</marquee>
 
@@ -295,7 +303,7 @@ $reviews->fetch_all();
               Pages
             </h6>
             <p>
-              <a href="Exhibitions.php" class="text-reset">Exhibitions</a>
+              <a href="Exhibition.php" class="text-reset">Exhibitions</a>
             </p>
             <p>
               <a href="Artists.html" class="text-reset">Top Artists</a>
@@ -320,7 +328,7 @@ $reviews->fetch_all();
               Edit Dashboard
             </h6>
             <p>
-              <a href="Login.php" class="text-reset">Login to system</a>
+              <a href="login.php" class="text-reset">Login to system</a>
             </p>
             <p>
               <a href="Dashboard.php" class="text-reset">Dashboard</a>
