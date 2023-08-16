@@ -1,0 +1,92 @@
+{
+    "artist" : 
+    [
+        {
+        "name" : "Anoma Wijewardena",
+        "para" : ["Anoma Wijewardena is a highly acclaimed contemporary artist from Sri Lanka known for her thought-provoking mixed-media installations and artworks. Her artistic practice explores diverse themes such as memory, identity, social issues, and the human condition. Wijewardena employs a wide range of mediums, including photography, painting, sculpture, and installation art, to convey her artistic vision. Her works often incorporate found objects, textiles, and other materials to create multi-layered narratives and immersive experiences for viewers.",
+        "Throughout her career, Wijewardena has exhibited her art internationally, showcasing her works in prestigious galleries, museums, and biennales. Some notable venues where her art has been displayed include the Saskia Fernando Gallery in Colombo, the Colombo Art Biennale, and the Venice Biennale.The artist's innovative approach to addressing social and cultural issues has garnered critical acclaim and recognition. Her installations and artworks encourage contemplation, introspection, and dialogue on topics ranging from gender and politics to the impact of war and globalization.", 
+        "Anoma Wijewardene's art reflects her deep engagement with Sri Lankan history, culture, and contemporary society. Through her evocative and visually striking creations, she challenges conventional perspectives and prompts viewers to reconsider their own relationship with the world around them."],
+        "id" : "AW"
+        },
+        {
+            "name" : "Chandraguptha Thenuwara",
+            "para" : ["Chandraguptha Thenuwara is a Sri Lankan artist whose body of work is dedicated to his plight to expose political corruption in Sri Lanka. In 1997 the artist began presenting his self-curated memorial exhibitions, presented on 23 July every year to commemorate 'Black July’1. He is a leading Sri Lankan Artist whose work focuses on issues surrounding the impact of war in Sri Lanka. In response to overwhelming crisis Thenuwara has devised his own stylistic formulation, which he has called “Barrelism”",
+            "His work has been featured in numerous key galleries and museums such as Ishara Art Foundation. He is also the founder of the Vibhavi Academy of Fine Arts in Colombo, which is dedicated to promoting contemporary art in Sri Lanka."],
+            "id" : "CT"
+        },
+        {
+            "name" : "David Paynter",
+            "para" : ["David Paynter was a prominent Sri Lankan artist known for his exceptional talent in mural painting and his contributions to the development of modern art in the country. Paynter's artistic journey began during his early years, and he pursued formal art education in London and Paris. Upon his return to Sri Lanka, he played a crucial role in establishing the Colombo '43 Group, an influential art collective that promoted modern art and creative expression.",
+            "His expertise in mural painting earned him significant recognition, and he left an indelible mark on several public buildings in Sri Lanka.Some of his notable mural works can be found at the University of Peradeniya , the chapel of Trinity College - Kandy and the Bandaranaike Memorial International Conference Hall (BMICH) in Colombo.David Paynter's art often reflected themes of everyday life in Sri Lanka, capturing the essence of rural landscapes, local traditions, and cultural events. His paintings showcased a rich blend of colors and textures, combining the beauty of the island's natural scenery with the vibrancy of its people.",
+            "Throughout his career, Paynter received numerous awards and accolades, including the title of \"Kalakeerthi\", recognizing his significant contributions to art and culture in Sri Lanka.His artistic legacy continues to inspire and influence the Sri Lankan art community, and his paintings remain cherished as masterpieces that beautifully depict the soul of the island's people and landscapes."],
+            "id" : "DP"
+        }, 
+        {
+            "name" : "Jagath Weerasinghe",
+            "para" : ["Jagath Weerasinghe is a prominent contemporary artist from Sri Lanka. Known for his politically engaged and thought-provoking artworks, he explores themes of history, politics, and society through his paintings, installations, and murals. Weerasinghe's art often reflects the socio-political context of Sri Lanka, particularly the country's civil war and post-colonial struggles. He incorporates symbolic imagery, historical references, and powerful visual narratives to stimulate dialogue and raise awareness about complex social issues.",
+            "Weerasinghe's art can be found in significant collections, such as the Devi Art Foundation in India and the National Art Gallery in Sri Lanka. Jagath Weerasinghe is not only recognized for his artistic contributions but also for his involvement in promoting art education and cultural activism. He has played a vital role in nurturing young artists and encouraging critical discourse within the Sri Lankan art community."],
+            "id" : "JW"
+        },
+        {
+            "name" : "George Keyt",
+            "para" : ["George Keyt (1901-1993) is one of Sri Lanka's most renowned modernist painters. He is known for his distinct style that combines traditional Sri Lankan art with Western influences. Keyt's paintings often feature vibrant colors, bold brushwork, and expressive figures. Throughout his career, Keyt drew inspiration from Sri Lankan folklore, mythology, and village life, incorporating these elements into his artworks. His subjects often include traditional dancers, musicians, and scenes from daily life in Sri Lanka.",
+            "George Keyt's art has been exhibited in prestigious galleries and museums worldwide. Some of his notable exhibitions are showcased at the National Museum of Colombo in Sri Lanka. Keyt's paintings can also be found in private collections and public institutions, including the George Keyt Foundation in Colombo, Sri Lanka, which was established to preserve and promote his artistic legacy. His works continue to captivate art enthusiasts and are celebrated for their cultural significance and artistic merit."],
+            "id" : "GK"
+        },
+        {
+            "name" : "Ivan Peries",
+            "para" : ["Ivan Peries was a prominent Sri Lankan artist known for his significant contributions to the development of modern art in Sri Lanka. He was a key figure in the 43 Group, an influential art collective that played a vital role in shaping the country's contemporary art movement.",
+            "Peries was recognized for his unique artistic style that blended traditional Sri Lankan themes with modern Western techniques. His artwork often featured vibrant colors, dynamic compositions, and a distinctive use of brushwork. During his early career, Peries studied and worked in London, where he was exposed to Western art movements such as Post-Impressionism and Cubism. Upon returning to Sri Lanka, he incorporated these influences into his work while staying rooted in his native cultural heritage. Throughout his artistic journey, Ivan Peries portrayed various aspects of Sri Lankan life, including landscapes, village scenes, and traditional rituals.",
+            "His paintings often depicted the everyday lives of the island's people and the country's lush natural beauty. Peries received international recognition for his artistic achievements and exhibited his works in galleries and museums worldwide. He was honored with several prestigious awards and accolades, including the Kalidas Samman award from the Government of Madhya Pradesh, India, for his outstanding contributions to art. Ivan Peries left a lasting impact on the art scene in Sri Lanka, inspiring subsequent generations of artists to explore their own cultural identities while embracing modern artistic trends. His legacy continues to be celebrated, and his artworks remain cherished treasures in the Sri Lankan art community."],
+            "id" : "IP"
+        },
+        {
+            "name" : "Pala Pothupitiye",
+            "para" : ["Pala Pothupitiye is a contemporary Sri Lankan artist known for his intricate pen-and-ink drawings and mixed-media artworks. He is recognized for addressing social and political issues prevalent in Sri Lanka through his thought-provoking and visually captivating creations. Pothupitiye's artwork often explores themes such as urbanization, environmental degradation, cultural preservation, and the impact of globalization. His drawings are meticulously detailed, featuring a multitude of tiny lines and intricate patterns that create rich visual narratives.",
+            "One of Pala Pothupitiye's notable series is \"Alternative Perspectives,\" in which he reimagines urban landscapes with surreal elements. Through this series, he examines the effects of rapid urbanization and challenges conventional notions of progress and development. Pothupitiye's artworks have been exhibited in numerous galleries and exhibitions in Sri Lanka and internationally. He has participated in notable events such as the Colombo Art Biennale and the Dhaka Art Summit. His thought-provoking pieces have garnered critical acclaim and attracted art enthusiasts from around the world.",
+            "Pala Pothupitiye's unique artistic style and his ability to address complex social issues through intricate drawings have made him a significant figure in the contemporary art scene in Sri Lanka. His work provokes reflection and invites viewers to contemplate the changing landscapes and challenges of the modern world."],
+            "id" : "PP"
+        },
+        {
+            "name" : "Sanjeewa Kumara",
+            "para" : ["Sanjeewa Kumara is a prominent contemporary artist from Sri Lanka known for his expressive and vibrant paintings. His works captivate viewers with their bold use of color, energetic brushstrokes, and dynamic compositions.",
+            "Kumara's art often explores the complexities of human emotions, capturing the essence of joy, sorrow, passion, and resilience. His paintings exhibit a distinct fusion of figurative and abstract elements, creating a visual language that conveys a range of emotions and experiences. The artist's subjects often include human figures, wildlife, and elements of nature, which he intertwines with symbolic motifs and cultural references. Through his art, Kumara invites viewers to contemplate the human condition and the interconnectedness of all living beings.",
+            "Sanjeewa Kumara's paintings have been widely exhibited in galleries and museums both in Sri Lanka and internationally. His captivating artwork has garnered critical acclaim and has been collected by art enthusiasts and institutions around the world. With his unique artistic style and captivating subject matter, Sanjeewa Kumara has made a significant impact on the contemporary art scene in Sri Lanka, contributing to the country's rich artistic legacy."],
+            "id" : "SK"
+        },
+        {
+            "name" : "Saskia Pintelon",
+            "para" : ["Saskia Pintelon is a contemporary artist originally from Belgium who has made Sri Lanka her home. Her diverse artistic practice includes painting, sculpture, and mixed-media installations. Pintelon's artwork often reflects her deep connection to Sri Lankan culture and landscapes. She draws inspiration from the vibrant colors, textures, and rhythms of the island. Her pieces often incorporate elements of nature, cultural symbolism, and personal narratives, creating evocative and visually captivating compositions.",
+            "Her art has been exhibited in numerous galleries and venues in Sri Lanka, including the Paradise Road Galleries and the Barefoot Gallery. Pintelon's work has also been showcased internationally, bringing Sri Lankan artistic expressions to a global audience.",
+            "With her cross-cultural background, Pintelon brings a unique perspective to her art, blending influences from both her Belgian roots and her adopted Sri Lankan home. Her work explores themes of identity, belonging, and the interconnectedness of human experiences.",
+            "Saskia Pintelon's art invites viewers to engage with the rich tapestry of Sri Lankan culture while embracing the universal language of artistic expression. Her contributions have enriched the contemporary art scene in Sri Lanka and beyond."],
+            "id" : "SP"
+        },
+        {
+            "name" : "Gayan Prageeth",
+            "para" : ["Gayan Prageeth is a Sri Lankan artist. His work is characterized by a Sri Lankan specific iconography and bears a sensitive awareness of ongoing environmental and political issues. The combination of intricate acrylic painting with fine ink drawings on rice paper, pasted on the canvas, creates a sharp visual style through which the artist critiques the socio-political environment in Sri Lanka. He makes use of ready-made material in his installations in a subtle commentary of the ethnic divide in the country. His work illustrates the turmoil of the civil war through installation and geometric symbolism – a combination of works that demonstrate not only Sri Lanka’s ruptured history but also the current state of many countries around the world1.",
+            "Gayan Prageeth earned a BFA in Painting from University of Visual and Performing Arts, Colombo, Sri Lanka in 2009. His work has been exhibited at Art Dubai, UAE (2018), Colombo Art Biennale, Sri Lanka (2016), Mandala Art Gallery, Singapore (2015), and the 13th Asian Art Biennale, Bangladesh (2008)."],
+            "id" : "GP"
+        },
+        {
+            "name" : "Nuwan Nalaka",
+            "para" : ["Nuwan Nalaka is a Sri Lankan artist. His versatility is reflected in his skillful handling of a wide range of mediums and techniques such as tempera, watercolors, Indian ink and wash painting. His work often delves into themes of Buddhist and Hindu philosophy, examined through a combination of visual metaphors, iconography, floral and vegetal forms. Nuwan’s visual style is influenced by folk and traditional painting techniques and styles of both India and Sri Lanka, and exhibits a seamless ability to shift between calligraphic, bold brush strokes and intricately detailed work.",
+            "He completed his Masters in Fine Art (2013) at the Rabindra Bharati University, Kolkata, India. His work has been exhibited at numerous exhibitions in both India and Sri Lanka."],
+            "id" : "NN"
+        },
+        {
+            "name" : "Gayan Prageeth",
+            "para" : ["Gayan Prageeth is a Sri Lankan artist. His work is characterized by a Sri Lankan specific iconography and bears a sensitive awareness of ongoing environmental and political issues. The combination of intricate acrylic painting with fine ink drawings on rice paper, pasted on the canvas, creates a sharp visual style through which the artist critiques the socio-political environment in Sri Lanka. He makes use of ready-made material in his installations in a subtle commentary of the ethnic divide in the country. His work illustrates the turmoil of the civil war through installation and geometric symbolism – a combination of works that demonstrate not only Sri Lanka’s ruptured history but also the current state of many countries around the world1.",
+            "Gayan Prageeth earned a BFA in Painting from University of Visual and Performing Arts, Colombo, Sri Lanka in 2009. His work has been exhibited at Art Dubai, UAE (2018), Colombo Art Biennale, Sri Lanka (2016), Mandala Art Gallery, Singapore (2015), and the 13th Asian Art Biennale, Bangladesh (2008)."],
+            "id" : "GP"
+        },
+        {
+            "name" : "Senaka Senanayake",
+            "para" : ["Senaka Senanayake is a contemporary Sri Lankan painter. His work, characterized by its brilliantly colored scenes of lush, overlapping jungle fauna and vegetation, has earned him a reputation as one of Sri Lanka’s most appreciated artists. Senaka is one of Sri Lanka’s premier artists.",
+            "His work can only be described as prolific, focusing on the plight of Sri Lanka’s natural rainforests. He combines his passion for art with his love for nature and exerts them to reinforce awareness about the prevailing situation of the country’s natural habitats1. Senanayake has held over a hundred one-man exhibitions in over 18 countries spanning the five continents. His works hang in the White House, the UN building in New York, in museums, private collections and corporate headquarters of multinationals around the world."],
+            "id" : "SS"
+        }
+    ]
+}
+
+    

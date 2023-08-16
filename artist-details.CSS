@@ -102,8 +102,18 @@ a {
 }
 
 /* Home Page */
+.back-button img {
+    float: left;
+    z-index: 1;
+    margin: 10px;
+    position: relative;
+    width: 4%;
+    transition: all .4s ease-in-out;
+}
 
-
+.back-button img:hover {
+    transform: scale(106%);
+}
 .card-mid{
     border-radius: 25px;
     
@@ -205,5 +215,4 @@ body {
   .image-container:hover img {
     transform: scale(1.2);
   }
-  
   

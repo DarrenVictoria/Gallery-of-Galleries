@@ -14,7 +14,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
     $moved=move_uploaded_file($tmppath,"imageshiddenupload/".$upname);
 
     // $name = $_POST['name'];
-    //$image = $_POST['image'];
+    $image = $_POST['image'];
     $location = $_POST['location'];
     $gallery = $_POST['gallery'];
     $sDate = $_POST['sDate'];
@@ -57,6 +57,14 @@ $exhibition = $result->fetch_assoc();
 </head>
 
 <body>
+    <script>
+            document.addEventListener('DOMContentLoaded', () => {
+            var disclaimer =  document.querySelector("img[alt='www.000webhost.com']");
+             if(disclaimer){
+                 disclaimer.remove();
+             }  
+           });
+  </script>
 
     <form action="editExhibition.php?exhibitionName=<?php echo $exhibitionName; ?>" method="post" class="m-5" enctype="multipart/form-data">
         <h3>Edit exhibition</h3>
@@ -66,27 +74,27 @@ $exhibition = $result->fetch_assoc();
         </div>
         <div class="form-group">
             <label class="form-label" for="customFile">Enter Exhibition image</label>
-            <input style="padding:2rem; " type="file" class="form-control" id="customFile" name="image" />
+            <input style="padding:2rem; " type="file" class="form-control" id="customFile" name="image" required />
         </div>
         <div class="form-group">
             <label for="formGroupExampleInput2">Location</label>
-            <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Location" name="location" value="<?php echo $exhibition['ExhibitionLocation'] ?>">
+            <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Location" required name="location" value="<?php echo $exhibition['ExhibitionLocation'] ?>">
         </div>
         <div class="form-group">
             <label for="formGroupExampleInput2">Gallery</label>
-            <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Gallery" name="gallery" value="<?php echo $exhibition['ExhibitionGallery'] ?>">
+            <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Gallery" required name="gallery" value="<?php echo $exhibition['ExhibitionGallery'] ?>">
         </div> 
         <div class="form-group">
             <label for="formGroupExampleInput2">Start Date</label>
-            <input type="date" class="form-control" id="formGroupExampleInput2" placeholder="Start Date" name="sDate" value="<?php echo $exhibition['ExhibitionStartDate'] ?>">
+            <input type="date" class="form-control" id="formGroupExampleInput2" placeholder="Start Date" required name="sDate" value="<?php echo $exhibition['ExhibitionStartDate'] ?>">
         </div>
         <div class="form-group">
             <label for="formGroupExampleInput2">End Date</label>
-            <input type="date" class="form-control" id="formGroupExampleInput2" placeholder="End Date" name="eDate" value="<?php echo $exhibition['ExhibitionEndDate'] ?>">
+            <input type="date" class="form-control" id="formGroupExampleInput2" required placeholder="End Date" name="eDate" value="<?php echo $exhibition['ExhibitionEndDate'] ?>">
         </div>
         <div class="form-group">
             <label for="formGroupExampleInput2">Time</label>
-            <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Time" name="time" value="<?php echo $exhibition['ExhibitionTime'] ?>">
+            <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Time" required name="time" value="<?php echo $exhibition['ExhibitionTime'] ?>">
         </div>
         <div class="form-group">
             <input type="submit" class="btn btn-primary" cvalue="Save">

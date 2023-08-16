@@ -24,7 +24,15 @@ $exhibitions->fetch_all();
 
 </head>
 
-<body>
+<body style="overflow-x: hidden; max-width:100%;">
+    <script>
+            document.addEventListener('DOMContentLoaded', () => {
+            var disclaimer =  document.querySelector("img[alt='www.000webhost.com']");
+             if(disclaimer){
+                 disclaimer.remove();
+             }  
+           });
+  </script>
 
   <marquee class="top-marquee" scrollamount="4">* Complimentary Gallery Exhibition happening on Tuesdays every other
     week *</marquee>
@@ -70,7 +78,7 @@ $exhibitions->fetch_all();
     <h1 class="category">Exhibitions</h1>
 
     <div class="flexbox-item-4">
-    <div ><h1 class="category-2">UPCOMING</h1></div>
+    <div ><h1 class="category-2" >UPCOMING</h1></div>
     <div class="date-time">
 
       <h4 class="category-3">Your current date and time</h4>
@@ -117,7 +125,7 @@ $exhibitions->fetch_all();
                   $class_list = "flexbox-item";
                 }
                 echo "
-                <div class=\"" . $class_list ."\">
+                <div class=\"" . $class_list ."\" >
                 <div class=\"img\"><img src=\" ". $exhibition['ExhibitionImage'] ."\"  class=\"img-fluid\"></div>
                 <div class=\"text\"><p class=\"p1\" id=\"txt2\">". $exhibition['ExhibitionName'] ."</p>
                   <p>
@@ -141,6 +149,7 @@ $exhibitions->fetch_all();
   </div>
   
  
+
 
   <!-- Footer -->
   <footer class="text-center text-lg-start bg-dark text-muted">
@@ -172,7 +181,7 @@ $exhibitions->fetch_all();
               Pages
             </h6>
             <p>
-              <a href="Exhibitions.php" class="text-reset">Exhibitions</a>
+              <a href="Exhibition.php" class="text-reset">Exhibitions</a>
             </p>
             <p>
               <a href="Artists.html" class="text-reset">Top Artists</a>
@@ -197,7 +206,7 @@ $exhibitions->fetch_all();
               Edit Dashboard
             </h6>
             <p>
-              <a href="Login.php" class="text-reset">Login to system</a>
+              <a href="login.php" class="text-reset">Login to system</a>
             </p>
             <p>
               <a href="Dashboard.php" class="text-reset">Dashboard</a>

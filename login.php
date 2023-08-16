@@ -1,6 +1,11 @@
 <?php
-  session_start();
-  require("connection.php");
+   session_start();
+   require("connection.php");
+ 
+   if (isset($_SESSION['adminLoginID'])) {
+     header("Location: Dashboard.php");
+     exit;
+   }
 ?>
 
 <!DOCTYPE html>
@@ -16,6 +21,14 @@
 </head>
 
 <body>
+  <script>
+            document.addEventListener('DOMContentLoaded', () => {
+            var disclaimer =  document.querySelector("img[alt='www.000webhost.com']");
+             if(disclaimer){
+                 disclaimer.remove();
+             }  
+           });
+  </script>
   <nav>
     <a href="index.php"><img src="assets\Images\login-images\arrow-left.png" alt="Back Arrow"></a>
   </nav>
@@ -36,19 +49,25 @@
     </div>
   </main>
   <?php
-    if (isset($_POST['login']))
-    {
-      $query = "SELECT * FROM usercredentials WHERE Username='$_POST[uname]' AND Password='$_POST[pwd]'";
-      $result = mysqli_query($connection, $query);
-      if (mysqli_num_rows($result) == 1)
-      {
-        $_SESSION['adminLoginID'] = $_POST['uname'];
-        echo "<script>document.location = 'Dashboard.php';</script>";
-        exit;
-      }
-      else
-      {
-        echo "<script>alert('Incorrect');</script>";
+    if (isset($_POST['login'])) {
+      $query = "SELECT * FROM `usercredentials` WHERE `Username` = ? AND `Password` = ?";
+      $stmt = mysqli_prepare($connection, $query);
+
+      if ($stmt) {
+        mysqli_stmt_bind_param($stmt, "ss", $_POST['uname'], $_POST['pwd']);
+        mysqli_stmt_execute($stmt);
+        $result = mysqli_stmt_get_result($stmt);
+
+        if (mysqli_num_rows($result) == 1) {
+          $_SESSION['adminLoginID'] = $_POST['uname'];
+          mysqli_stmt_close($stmt);
+          echo "<script>document.location = 'Dashboard.php';</script>";
+          exit;
+        } else {
+          echo "<script>alert('Incorrect');</script>";
+        }
+
+        mysqli_stmt_close($stmt);
       }
     }
   ?>

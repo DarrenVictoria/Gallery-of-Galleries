@@ -15,295 +15,294 @@
 </head>
 
 <body>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            var disclaimer = document.querySelector("img[alt='www.000webhost.com']");
+            if (disclaimer) {
+                disclaimer.remove();
+            }
+        });
+    </script>
     <marquee class="top-marquee" scrollamount="4">* Complimentary Gallery Exhibition happening on Tuesdays every other week *</marquee>
 
-    <nav  class="navbar navbar-expand-lg navbar-dark nav-bar-color" style="margin-top: -6px;">
-        <a   class="navbar-brand" href="index.php" style="padding: 0%; margin: 0%;">
-            <img class="logo-main" style="width:150px; height:auto; border-color: transparent; "
-                src="assets/Logo/gallery-of-galleries-logo-zip-file/png/logo-white-removebg small.png">
-        </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-    
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav ml-auto" style="gap: .5rem;">
-    
-                <li class="nav-item">
-                    <a class="nav-link" href="Exhibition.php">Exhibitions</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="Artists.html">Top Artists</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="GalleryMap.html">Gallery Map</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="HistoryOfArt.html">History of Art</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="AI Art.html">Art Display Gallery</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="aboutus.html">About</a>
-                </li>
-                <li class="nav-item">
-                    <a href="login.php"><button name="login" class="login btn btn-primary nav-link">Login</button></a>
-                </li>
-            </ul>
-        </div>
-    </nav>
+    <nav class="navbar navbar-expand-lg navbar-dark nav-bar-color" style="margin-top: -6px;">
+    <a class="navbar-brand" href="index.php" style="padding: 0%; margin: 0%;">
+      <img class="logo-main" style="width:150px; height:auto;"
+        src="assets/Logo/gallery-of-galleries-logo-zip-file/png/logo-white-removebg small.png">
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto" style="gap: .5rem;">
+
+        <li class="nav-item">
+          <a class="nav-link" href="Exhibition.php">Exhibitions</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="Artists.html">Top Artists</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="GalleryMap.html">Gallery Map</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="HistoryOfArt.html">History of Art</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="AI Art.html">Art Display Gallery</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="aboutus.html">About</a>
+        </li>
+        <li class="nav-item">
+          <a href="login.php"><button name="login" class="login btn btn-primary nav-link">Login</button></a>
+        </li>
+      </ul>
+    </div>
+  </nav>
 
 
     <!--Main-->
     <br><br>
    
-    <main>
+    <main class="body">
+        <script src="loadingPage.js"></script>
         <h1>Top Artists</h1>
-      
-        <!--<div class="container-carousel scrollbar">
-            <div class="slider">
-                <img src="wallhaven-4g9p37_2560x1600.png" alt="" id="img1">
-                <img src="wallhaven-j3g7yy_2560x1600.png" alt="" id="img2">
-                <img src="wallhaven-g77x8l_2560x1600.png" alt="" id="img3">
-                
-            </div>
-        </div>-->
         <div class="card-wrapper">
             <div class="card">
                 <div class="image-frame">
-                    <img src="assets/Images/artist-images/img-JW.jpg" alt="">
+                    <img src="assets/Images/artist-images/JW.jpeg" alt="">
                 </div>
                 <div class="body-text">
                     <h5>Jagath Weerasinghe</h5>
                     <p>contemporary Sri Lankan artist</p>
                      
-                    <a href="artist/Jagath Weerasinghe.html" ><button class="readme">Read More</button></a>
+                    <button id="JW" class="readme" onclick="openArtistPage('JW');">Read More</button>
                 </div>
             </div>
             <div class="card">
                 <div class="image-frame">
-                    <img src="assets/Images/artist-images/img-DP.jpg"
+                    <img src="assets/Images/artist-images/DP.jpeg"
                         alt="">
                 </div>
                 <div class="body-text">
                     <h5>David Paynter</h5>
                     <p>Sri Lankan Mural artist</p>
-                    <a href="artist/David Paynter.html" > <button class="readme">Read More</button></a>
+                    <button id="DP" class="readme" onclick="openArtistPage('DP');">Read More</button>
                 </div>
             </div>
             <div class="card">
                 <div class="image-frame">
-                    <img src="assets/Images/artist-images/img-GK.jpeg"
+                    <img src="assets/Images/artist-images/GK.jpeg"
                         alt="">
                 </div>
                 <div class="body-text">
                     <h5>George Keyt</h5>
                     <p>Sri Lankan Modernist Painter</p>
-                    <a href="artist/George keyt.html" ><button class="readme">Read More</button></a>
+                    <button id="GK" class="readme" onclick="openArtistPage('GK');">Read More</button>
                 </div>
             </div>
             <div class="card">
                 <div class="image-frame">
-                    <img src="assets/Images/artist-images/img-IP.jpg"
+                    <img src="assets/Images/artist-images/IP.jpeg"
                         alt="">
                 </div>
                 <div class="body-text">
                     <h5>Ivan Peries</h5>
                     <p> Modern Sri Lankan Artist</p>
-                    <a href="artist/Ivan Peries.html" ><button class="readme">Read More</button></a>
+                    <button id="IP" class="readme" onclick="openArtistPage('IP');">Read More</button>
                 </div>
             </div>
             <div class="card">
                 <div class="image-frame">
-                    <img src=" assets/Images/artist-images/img-P.jpg">
+                    <img src=" assets/Images/artist-images/PP.jpeg">
                 </div>
                 <div class="body-text">
                     <h5>Pala Pothupitiye</h5>
                     <p>contemporary Sri Lankan Artist</p>
-                    <a href="artist/Pala Pothupitiye.html" ><button class="readme">Read More</button></a>
+                    <button id="PP" class="readme" onclick="openArtistPage('PP');">Read More</button>
                 </div>
             </div>
             <div class="card">
                 <div class="image-frame">
-                    <img src="assets/Images/artist-images/img-SK.jpg"
+                    <img src="assets/Images/artist-images/SK.jpeg"
                         alt="">
                 </div>
                 <div class="body-text">
-                    <h5>Sanjeewa kumara</h5>
+                    <h5>Sanjeewa Kumara</h5>
                     <p>Contemporary Sri Lankan artist</p>
-                    <a href="artist/Sanjeewa Kumara.html" ><button class="readme">Read More</button></a>
+                    <button id="SK" class="readme" onclick="openArtistPage('SK');">Read More</button>
                 </div>
             </div>
             <div class="card">
                 <div class="image-frame">
-                    <img src="assets/Images/artist-images/img-SP.jpg"
+                    <img src="assets/Images/artist-images/SP.jpeg"
                         alt="">
                 </div>
                 <div class="body-text">
                     <h5>Saskia Pintelon</h5>
                     <p>Contemporary Sri Lankan artist</p>
-                    <a href="artist/Saskia Pintelon.html" ><button class="readme">Read More</button></a>
+                    <button id="SP" class="readme" onclick="openArtistPage('SP');">Read More</button>
                 </div>
             </div>
             <div class="card">
                 <div class="image-frame">
-                    <img src="assets/Images/artist-images/img-SS.jpg"
+                    <img src="assets/Images/artist-images/SS.jpeg"
                         alt="">
                 </div>
                 <div class="body-text">
                     <h5>Senaka Senanayake</h5>
                     <p>Contemporary Sri Lankan artist</p>
-                    <a href="artist/Senaka Senanayake.html" ><button class="readme">Read More</button></a>
+                    <button id="SS" class="readme" onclick="openArtistPage('SS');">Read More</button>
                 </div>
             </div>
             <div class="card">
                 <div class="image-frame">
-                    <img src="assets/Images/artist-images/img-AW.jpg"
+                    <img src="assets/Images/artist-images/AW.jpeg"
                         alt="">
                 </div>
                 <div class="body-text">
                     <h5> Anoma Wijewardena </h5>
                     <p>Contemporary Sri Lanka Artist</p>
-                    <a href="artist/Anoma Wijewardena.html"><button class="readme">Read More</button></a>
+                    <button id="AW" class="readme" onclick="openArtistPage('AW');">Read More</button>
                 </div>
             </div>
             <div class="card">
                 <div class="image-frame">
-                    <img src="assets/Images/artist-images/img-GP.jpg"
+                    <img src="assets/Images/artist-images/GP.jpeg"
                         alt="">
                 </div>
                 <div class="body-text">
                     <h5>Gayan Prageeth </h5>
                     <p>Contemporary Sri Lanka Artist</p>
-                    <a href="artist/Gayan Prageeth.html"><button class="readme">Read More</button></a>
+                    <button id="GP" class="readme" onclick="openArtistPage('GP');">Read More</button>
                 </div>
             </div>
             <div class="card">
                 <div class="image-frame">
-                    <img src="assets/Images/artist-images/img-NN.jpg"
+                    <img src="assets/Images/artist-images/NN.jpeg"
                         alt="">
                 </div>
                 <div class="body-text">
                     <h5>Nuwan Nalaka</h5>
                     <p>Contemporary Sri Lanka Artist</p>
-                    <a href="artist/Nuwan Nalaka.html"><button class="readme">Read More</button></a>
+                    <button id="NN" class="readme" onclick="openArtistPage('NN');">Read More</button>
                 </div>
             </div>
             <div class="card">
                 <div class="image-frame">
-                    <img src="assets/Images/artist-images/img-CT.jpg"
+                    <img src="assets/Images/artist-images/CT.jpeg"
                         alt="">
                 </div>
                 <div class="body-text">
                     <h5>Chandraguptha Thenuwara</h5>
                     <p>Contemporary Sri Lanka Artist</p>
-                    <a href="artist/Chandraguptha Thenuwara.html"><button class="readme">Read More</button></a>
+                    <button id="CT" class="readme" onclick="openArtistPage('CT');">Read More</button>
                 </div>
             </div>
         </div>
+        <br>
     </main> 
            
-    <!-- Footer -->
-    <footer class="text-center text-lg-start bg-dark text-muted">
-        <!-- Section: Links  -->
-        <section class="page-footer" style="padding:10px">
-            <div class="container text-center text-md-start mt-5" style=>
-                <!-- Grid row -->
-                <div class="row mt-3">
-                    <!-- Grid column -->
-                    <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
-                        <!-- Content -->
-                        <br>
-                        <h6 class="text-uppercase fw-bold mb-4">
-                            <i class="fas fa-gem me-3 text-secondary"></i>Gallery of Galleries (Pvt) Ltd
-                        </h6>
-                        <p>
-                            Gallery of Galleries, your ultimate local gallery directory. Discover a curated collection of
-                            art
-                            galleries in your area, showcasing the best of local talent. From contemporary spaces to hidden
-                            gems,
-                            explore the diverse artistic landscape right at your fingertips.
-                        </p>
-                    </div>
-                    <!-- Grid column -->
-    
-                    <!-- Grid column -->
-                    <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
-                        <!-- Links -->
-                        <br>
-                        <h6 class="text-uppercase fw-bold mb-4">
-                            Pages
-                        </h6>
-                        <p>
-                            <a href="Exhibitions.php" class="text-reset">Exhibitions</a>
-                        </p>
-                        <p>
-                            <a href="Artists.html" class="text-reset">Top Artists</a>
-                        </p>
-                        <p>
-                            <a href="GalleryMap.html" class="text-reset">Gallery Map</a>
-                        </p>
-                        <p>
-                            <a href="HistoryOfArt.html" class="text-reset">History of Art</a>
-                        </p>
-                        <p>
-                            <a href="AI Art.html" class="text-reset">Art Gallery Display</a>
-                        </p>
-                    </div>
-                    <!-- Grid column -->
-    
-                    <!-- Grid column -->
-                    <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
-                        <!-- Links -->
-                        <br>
-                        <h6 class="text-uppercase fw-bold mb-4">
-                            Edit Dashboard
-                        </h6>
-                        <p>
-                            <a href="Login.php" class="text-reset">Login to system</a>
-                        </p>
-                        <p>
-                            <a href="Dashboard.php" class="text-reset">Dashboard</a>
-                        </p>
-                        <p>
-                            <a href="#!" class="text-reset"></a>
-                        </p>
-                        <p>
-                            <a href="#!" class="text-reset"></a>
-                        </p>
-                    </div>
-                    <!-- Grid column -->
-    
-                    <!-- Grid column -->
-                    <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
-                        <!-- Links -->
-                        <br>
-                        <h6 class="text-uppercase fw-bold mb-4">Contact</h6>
-                        <p><i class="fas fa-home me-3 text-secondary"></i> Colombo 07 , Sri Lanka</p>
-                        <p>
-                            <i class="fas fa-envelope me-3 text-secondary"></i>
-                            galleryofgalleries@artists.com
-                        </p>
-                        <p>+ 94 713456484</p>
-                        <p>+94 703412996</p>
-                    </div>
-                    <!-- Grid column -->
-                </div>
-                <!-- Grid row -->
-            </div>
-        </section>
-        <!-- Section: Links  -->
-    
-        <!-- Copyright -->
-        <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.025);">
-            © 2023 Copyright: Gallery of Galleries
-    
+  <!-- Footer -->
+  <footer class="text-center text-lg-start bg-dark text-muted">
+    <!-- Section: Links  -->
+    <section class="page-footer" style="padding:10px">
+      <div class="container text-center text-md-start mt-5" style=>
+        <!-- Grid row -->
+        <div class="row mt-3">
+          <!-- Grid column -->
+          <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+            <!-- Content -->
+            <br>
+            <h6 class="text-uppercase fw-bold mb-4">
+              <i class="fas fa-gem me-3 text-secondary"></i>Gallery of Galleries (Pvt) Ltd
+            </h6>
+            <p>
+              Gallery of Galleries, your ultimate local gallery directory. Discover a curated collection of art
+              galleries in your area, showcasing the best of local talent. From contemporary spaces to hidden gems,
+              explore the diverse artistic landscape right at your fingertips.
+            </p>
+          </div>
+          <!-- Grid column -->
+
+          <!-- Grid column -->
+          <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+            <!-- Links -->
+            <br>
+            <h6 class="text-uppercase fw-bold mb-4">
+              Pages
+            </h6>
+            <p>
+              <a href="Exhibition.php" class="text-reset">Exhibitions</a>
+            </p>
+            <p>
+              <a href="Artists.html" class="text-reset">Top Artists</a>
+            </p>
+            <p>
+              <a href="GalleryMap.html" class="text-reset">Gallery Map</a>
+            </p>
+            <p>
+              <a href="HistoryOfArt.html" class="text-reset">History of Art</a>
+            </p>
+            <p>
+              <a href="AI Art.html" class="text-reset">Art Gallery Display</a>
+            </p>
+          </div>
+          <!-- Grid column -->
+
+          <!-- Grid column -->
+          <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+            <!-- Links -->
+            <br>
+            <h6 class="text-uppercase fw-bold mb-4">
+              Edit Dashboard
+            </h6>
+            <p>
+              <a href="login.php" class="text-reset">Login to system</a>
+            </p>
+            <p>
+              <a href="Dashboard.php" class="text-reset">Dashboard</a>
+            </p>
+            <p>
+              <a href="#!" class="text-reset"></a>
+            </p>
+            <p>
+              <a href="#!" class="text-reset"></a>
+            </p>
+          </div>
+          <!-- Grid column -->
+
+          <!-- Grid column -->
+          <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+            <!-- Links -->
+            <br>
+            <h6 class="text-uppercase fw-bold mb-4">Contact</h6>
+            <p><i class="fas fa-home me-3 text-secondary"></i> Colombo 07 , Sri Lanka</p>
+            <p>
+              <i class="fas fa-envelope me-3 text-secondary"></i>
+              galleryofgalleries@artists.com
+            </p>
+            <p>+94 713456484</p>
+            <p>+94 703412996</p>
+          </div>
+          <!-- Grid column -->
         </div>
-        <!-- Copyright -->
-    </footer>
-    <!-- Footer -->
+        <!-- Grid row -->
+      </div>
+    </section>
+    <!-- Section: Links  -->
+
+    <!-- Copyright -->
+    <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.025);">
+      © 2023 Copyright: Gallery of Galleries
+
+    </div>
+    <!-- Copyright -->
+  </footer>
+  <!-- Footer -->
 
    
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
@@ -319,4 +318,3 @@
 </body>
 
 </html>
-

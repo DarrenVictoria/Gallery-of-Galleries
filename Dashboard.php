@@ -30,6 +30,14 @@ $exhibitions->fetch_all();
 </head>
 
 <body>
+    <script>
+            document.addEventListener('DOMContentLoaded', () => {
+            var disclaimer =  document.querySelector("img[alt='www.000webhost.com']");
+             if(disclaimer){
+                 disclaimer.remove();
+             }  
+           });
+  </script>
 
   <marquee class="top-marquee" scrollamount="4">* Complimentary Gallery Exhibition happening on Tuesdays every other
     week *</marquee>
@@ -66,9 +74,6 @@ $exhibitions->fetch_all();
         <li class="nav-item"> 
           <a href="login.php"><button name="login" class="login btn btn-primary nav-link">Login</button></a>
         </li>
-        <li class="nav-item"> 
-          <a href="logout.php"><button name="login" class="login btn btn-danger nav-link">Logout</button></a>
-        </li>
       </ul>
     </div>
   </nav>
@@ -93,11 +98,11 @@ $exhibitions->fetch_all();
                               <div class=\"card-body\">
                                 <h5 class=\"card-title bebas-neue-sub\">". $exhibition['ExhibitionName'] ."</h5>
                                 <p class=\"card-text\">
-                                    Location: " .$exhibition['ExhibitionLocation'] . "<br>
-                                    Gallery :" . $exhibition['ExhibitionGallery'] . "<br>
+                                    Location : " .$exhibition['ExhibitionLocation'] . "<br>
+                                    Gallery : " . $exhibition['ExhibitionGallery'] . "<br>
                                     Start date : ". $exhibition['ExhibitionStartDate'] . "<br>
                                     End date : " . $exhibition['ExhibitionEndDate'] . "<br>
-                                    Time: " . $exhibition['ExhibitionTime'] . "<br>
+                                    Time : " . $exhibition['ExhibitionTime'] . "<br>
                                                    
                                 </p>
                                 <form action=\"editExhibition.php\" method=\"get\">

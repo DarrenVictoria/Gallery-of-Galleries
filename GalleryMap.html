@@ -16,6 +16,14 @@
 </head>
 
 <body>
+    <script>
+            document.addEventListener('DOMContentLoaded', () => {
+            var disclaimer =  document.querySelector("img[alt='www.000webhost.com']");
+             if(disclaimer){
+                 disclaimer.remove();
+             }  
+           });
+  </script>
   <marquee class="top-marquee" scrollamount="4">* Complimentary Gallery Exhibition happening on Tuesdays every other
     week *</marquee>
 
@@ -785,6 +793,7 @@
     <br><br>
 
 
+
   <!-- Footer -->
   <footer class="text-center text-lg-start bg-dark text-muted">
     <!-- Section: Links  -->
@@ -806,7 +815,7 @@
             </p>
           </div>
           <!-- Grid column -->
-  
+
           <!-- Grid column -->
           <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
             <!-- Links -->
@@ -815,7 +824,7 @@
               Pages
             </h6>
             <p>
-              <a href="Exhibitions.php" class="text-reset">Exhibitions</a>
+              <a href="Exhibition.php" class="text-reset">Exhibitions</a>
             </p>
             <p>
               <a href="Artists.html" class="text-reset">Top Artists</a>
@@ -831,7 +840,7 @@
             </p>
           </div>
           <!-- Grid column -->
-  
+
           <!-- Grid column -->
           <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
             <!-- Links -->
@@ -840,7 +849,7 @@
               Edit Dashboard
             </h6>
             <p>
-              <a href="Login.php" class="text-reset">Login to system</a>
+              <a href="login.php" class="text-reset">Login to system</a>
             </p>
             <p>
               <a href="Dashboard.php" class="text-reset">Dashboard</a>
@@ -853,7 +862,7 @@
             </p>
           </div>
           <!-- Grid column -->
-  
+
           <!-- Grid column -->
           <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
             <!-- Links -->
@@ -873,16 +882,15 @@
       </div>
     </section>
     <!-- Section: Links  -->
-  
+
     <!-- Copyright -->
     <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.025);">
       © 2023 Copyright: Gallery of Galleries
-  
+
     </div>
     <!-- Copyright -->
   </footer>
   <!-- Footer -->
-
 
 
 

@@ -2,116 +2,16 @@
 @import url('https://fonts.cdnfonts.com/css/bebas-neue');
 
 
-@media screen and (max-width: 850px) {
-    .img-fluid {
-        height: 400px;
-        max-height: auto;
-        width: 100%;
-        max-width: auto;
-        border-radius: 20px;
-        border-bottom-left-radius: 0%;
-        border-bottom-right-radius: 0%;
-        object-fit: cover;
-        filter: grayscale(0%)  ;
 
-    }
-
-    .img-fluid-2 {
-        height: 400px;
-        max-height: auto;
-        width: 100%;
-        max-width: auto;
-        border-radius: 20px;
-        border-bottom-left-radius: 0%;
-        border-bottom-right-radius: 0%;
-        object-fit: cover;
-        filter: grayscale(100%)  ;
-
-    }
-
-  
-    .flexbox-item{
-        display: flex;
-        width: auto;
-        height: auto;
-        
-        flex-direction: column;
-        margin: 10px;
-        border: 1px solid #333;
-        border-radius: 20px;
-        background-color:#343434;
-        cursor: pointer;
-        will-change: transform;
-        transition: transform .2s;  
-    
-    }
-    .flexbox-item-4{
-        display: flex;
-        flex-wrap: wrap;
-        flex-direction: column;
-        
-    }
-    .date-time{
-        margin-left: 43px;
-        position: relative;
-        top: -80px;
-    }
-    .logout{
-        padding: 3px !important;
-        margin-top: 4px !important;
-    }
-
-  }
-
-  @media screen and (min-width: 850px) {
-    .img-fluid{
-        height: 100%;
-        max-height: auto;
-        width: 100% fixed;
-        max-width: 300px;
-        border-radius: 20px; 
-        border-bottom-right-radius: 0%;  
-        border-top-right-radius: 0%;
-        object-fit: cover;
-        filter: grayscale(0%);
-    }
-
-    .img-fluid-2{
-        height: 100%;
-        max-height: auto;
-        width: 100% fixed;
-        max-width: 300px;
-        border-radius: 20px; 
-        border-bottom-right-radius: 0%;  
-        border-top-right-radius: 0%;
-        object-fit: cover;
-        filter: grayscale(100%);
-    }
-
-
-    .flexbox-item{
-        display: flex;
-        width: auto;
-        height: auto;
-        max-width: 1300px;
-        margin: 15px;
-        border: 1px solid #333;
-        border-radius: 20px;
-        background-color:#343434;
-        cursor: pointer;
-        will-change: transform;
-        transition: transform .2s;  
-    }
-    .flexbox-item-4{
-        display: flex;
-        flex-wrap: wrap;
-        
-    }
   }
 body{
  background-color: #ebebe3;
   }
   
+
+
+
+
 .flexbox-container{
     display: flex;
     flex-direction: column;
@@ -359,4 +259,110 @@ a {
     top: 70%;
     transform: translate(0,0%);
 }
+
+@media screen and (max-width: 850px) {
+    .img-fluid {
+        height: 400px;
+        max-height: auto;
+        width: 100%;
+        max-width: auto;
+        border-radius: 20px;
+        border-bottom-left-radius: 0%;
+        border-bottom-right-radius: 0%;
+        object-fit: cover;
+        filter: grayscale(0%)  ;
+
+    }
+
+    .img-fluid-2 {
+        height: 400px;
+        max-height: auto;
+        width: 100%;
+        max-width: auto;
+        border-radius: 20px;
+        border-bottom-left-radius: 0%;
+        border-bottom-right-radius: 0%;
+        object-fit: cover;
+        filter: grayscale(100%)  ;
+
+    }
+
+  
+    .flexbox-item{
+        display: flex;
+        width: auto;
+        height: auto;
+        
+        flex-direction: column;
+        margin: 10px;
+        border: 1px solid #333;
+        border-radius: 20px;
+        background-color:#343434;
+        cursor: pointer;
+        will-change: transform;
+        transition: transform .2s;  
+    
+    }
+    .flexbox-item-4{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        
+    }
+    .date-time{
+        margin-left: 43px;
+        position: relative;
+        top: -80px;
+    }
+    .logout{
+        padding: 3px !important;
+        margin-top: 4px !important;
+    }
+
+  }
+
+  @media screen and (min-width: 850px) {
+    .img-fluid{
+        height: 100%;
+        max-height: auto;
+        width: 100% fixed;
+        max-width: 300px;
+        border-radius: 20px; 
+        border-bottom-right-radius: 0%;  
+        border-top-right-radius: 0%;
+        object-fit: cover;
+        filter: grayscale(0%);
+    }
+
+    .img-fluid-2{
+        height: 100%;
+        max-height: auto;
+        width: 100% fixed;
+        max-width: 300px;
+        border-radius: 20px; 
+        border-bottom-right-radius: 0%;  
+        border-top-right-radius: 0%;
+        object-fit: cover;
+        filter: grayscale(100%);
+    }
+
+
+    .flexbox-item{
+        display: flex;
+        width: auto;
+        height: auto;
+        max-width: 1300px;
+        margin: 15px;
+        border: 1px solid #333;
+        border-radius: 20px;
+        background-color:#343434;
+        cursor: pointer;
+        will-change: transform;
+        transition: transform .2s;  
+    }
+    .flexbox-item-4{
+        display: flex;
+        flex-wrap: wrap;
+        
+    }
 

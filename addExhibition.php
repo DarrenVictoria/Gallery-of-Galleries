@@ -50,36 +50,44 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
 </head>
 
 <body> 
+     <script>
+            document.addEventListener('DOMContentLoaded', () => {
+            var disclaimer =  document.querySelector("img[alt='www.000webhost.com']");
+             if(disclaimer){
+                 disclaimer.remove();
+             }  
+           });
+     </script>
 
     <form action="addExhibition.php" method="post" class="m-5" enctype="multipart/form-data">
         <h3>Add new exhibition</h3>
         <div class="form-group">
             <label for="formGroupExampleInput">Name</label>
-            <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Name" name="name">
+            <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Name" name="name" required>
         </div>
         <div class="form-group">
             <label class="form-label" for="customFile">Enter Exhibition image</label>
-            <input style="padding:2rem; " type="file" class="form-control" id="customFile" name="image" />
+            <input style="padding:2rem; " type="file" class="form-control" id="customFile" name="image" required />
         </div>
         <div class="form-group">
             <label for="formGroupExampleInput2">Location</label>
-            <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Location" name="location">
+            <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Location" name="location" required>
         </div>
         <div class="form-group">
             <label for="formGroupExampleInput2">Gallery</label>
-            <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Gallery" name="gallery">
+            <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Gallery" name="gallery" required>
         </div>
         <div class="form-group">
             <label for="formGroupExampleInput2">Start Date</label>
-            <input type="date" class="form-control" id="formGroupExampleInput2" placeholder="Start Date" name="sDate">
+            <input type="date" class="form-control" id="formGroupExampleInput2" placeholder="Start Date" name="sDate" required>
         </div>
         <div class="form-group">
             <label for="formGroupExampleInput2">End Date</label>
-            <input type="date" class="form-control" id="formGroupExampleInput2" placeholder="End Date" name="eDate">
+            <input type="date" class="form-control" id="formGroupExampleInput2" placeholder="End Date" name="eDate" required>
         </div>
         <div class="form-group">
             <label for="formGroupExampleInput2">Time</label>
-            <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Time" name="time">
+            <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Time" name="time" required>
         </div>
         
 

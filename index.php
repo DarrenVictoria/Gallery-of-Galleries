@@ -240,7 +240,7 @@ $reviews->fetch_all();
       <textarea class="form-control" id="Review" name="review" rows="4" cols="50" placeholder="Enter review here..."></textarea>
     </div>
 
-    <button type="submit" class="btn btn-primary">Submit</button>
+    <button type="submit" class="btn btn-primary" id="submit">Submit</button>
   </form>
   
   <div class="m-3 ">
@@ -269,6 +269,33 @@ $reviews->fetch_all();
         
         ?>
     </div>
+    <script>
+            document.getElementById('submit').onclick = () => {
+                const uname = document.getElementById('Name');
+                const gallery = document.getElementById('GalleryVisited');
+                const rev = document.getElementById('Review');
+        
+                if (uname.value == "") {
+                    alert("Enter a Name");
+                    return false;
+                } else if (uname.value.trim().length > 30) {
+                    alert("Name must be less than 30 characters");
+                    return false;
+                } else if (gallery.value == "") {
+                    alert("Enter a gallery Name");
+                    return false;
+                } else if (gallery.value.trim().length > 50) {
+                    alert("Gallery name should be less than 50 characters");
+                    return false;
+                } else if (rev.value == "") {
+                    alert("Please enter a review for this gallery");
+                    return false;
+                } else if (rev.value.trim().length > 500) {
+                    alert("Review should be under 500 words");
+                    return false;
+                }
+            }
+        </script>
 
   </div>
   
